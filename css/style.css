@@ -1,0 +1,142 @@
+:root {
+  --index: calc(1vh + 1vw);
+  /* --primary-color:  */
+  --secondary-color: rgb(39, 39, 39);
+  --primary-font-color: rgb(206, 206, 206);
+  --nav-font-color-hover: rgb(90, 74, 0);
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.page-layout {
+  position: relative;
+  min-height: 100vh;
+  max-width: 1920px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#site-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* height: 65vh; */
+  height: calc(var(--index) * 20);
+  max-height: 65vh;
+  padding-bottom: 40px;
+  background: var(--secondary-color);
+}
+
+.header-site-intro {
+  display: flex;
+  /* height: 100%; */
+  /* height: auto; */
+}
+
+.header-intro-left-side {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  width: 1200px;
+  /* height: 100%; */
+  /* background-color: aliceblue; */
+  z-index: 999;
+}
+
+.header-intro-left-side::after {
+  content: "";
+  position: absolute;
+  background: #5c4300;
+  background: var(--secondary-color);
+  height: 101%;
+  width: 250px;
+  right: -115px;
+  transform: skewX(25deg);
+  z-index: 0;
+}
+
+.header-logo-container {
+  position: relative;
+  max-height: 435px;
+  width: auto;
+  /* margin-top: 50px; */
+  margin-top: calc(var(--index) * 2);
+  margin-left: 100px;
+  z-index: 999;
+}
+
+.header__logo {
+  height: calc(var(--index) * 15);
+  width: auto;
+  margin: 0;
+}
+
+.header__company-name {
+  display: block;
+  color: var(--primary-font-color);
+  font-size: 40px;
+  text-align: center;
+}
+
+.header-intro-right-side {
+  width: 100%;
+  max-height: 65vh;
+  height: 100%;
+}
+
+.header__background-image {
+  display: block;
+  /* height: 100%; */
+  height: calc(var(--index) * 18);
+  width: auto;
+  /* object-fit: cover; */
+  /* opacity: 0.5; */
+  background-position: center;
+}
+
+.header-nav-container {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 120px;
+  margin-top: 10px;
+}
+
+nav {
+  display: flex;
+}
+
+.nav__item {
+  display: block;
+  font-size: 24px;
+  color: rgb(206, 206, 206);
+  padding: 5px 10px;
+  margin-right: 20px;
+  border: 0;
+  transition: 0.5s ease-out;
+}
+
+.nav__item:hover {
+  /* color: var(--font-color-hover); */
+  color: #5c4300;
+  color: #664b00;
+  color: rgb(107, 100, 0);
+  border: 1px solid rgb(107, 100, 0);
+  transition: 0.75s ease-out;
+}
