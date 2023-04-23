@@ -14,7 +14,7 @@
       rel="stylesheet"
     />
 
-    <script src="./js/app.js"></script>
+    <script src="./js/app.js" defer></script>
     <title>ООО "Медведь"</title>
   </head>
   <body>
@@ -23,10 +23,13 @@
         <div class="header-nav-container">
           <nav>
             <a class="nav__item active" href="index.html">Главная</a>
-            <a class="nav__item" href="./pages/drova.html">Дрова</a>
-            <a class="nav__item" href="./pages/dilivery.html">Грузоперевозки</a>
+            <a class="nav__item" href="./pages/drova.html">Продукция</a>
+            <a class="nav__item" href="./pages/contacts.html">Контакты</a>
           </nav>
-          <span class="header__telephone">+79314325544</span>
+          <a class="header__telephone" href="tel:+79314325544">
+            <!-- <i class="fa-light fa-phone-volume fa-beat" style="color: #8d8410;"></i> -->
+            <span>+79314325544</span>
+          </a>
         </div>
         <div class="header-site-intro">
           <div class="header-intro-left-side">
@@ -45,14 +48,174 @@
               src="./img/header-background.jpg"
               alt=""
             />
-            <span class="header__company-description"
+            <span class="header__site-description"
               >Доставка дров, древесных изделий, перевозка грузов, расчистка
               участков от древесных насаждений</span
             >
           </div>
         </div>
       </header>
-      <main></main>
+      <main>
+        <section class="company-advantages page-section">
+          <!-- <h3 class="section-title">Наши преимущества</h3> -->
+          <div class="company-advantages-container container">
+            <div class="company__advantage">
+              <img
+                src="./img/advantage1.png"
+                alt="Индивидуальный подход"
+                title="Индивидуальный подход"
+              />
+              <span>Индивидуальный подход</span>
+            </div>
+            <div class="company__advantage">
+              <img
+                src="./img/advanatge2.png"
+                alt="Индивидуальный подход"
+                title="Индивидуальный подход"
+              />
+              <span>Собственное производство</span>
+            </div>
+            <div class="company__advantage">
+              <img
+                src="./img/advanatge3.png"
+                alt="Высокое качество"
+                title="Высокое качество"
+              />
+              <span>Высокое качество</span>
+            </div>
+            <div class="company__advantage">
+              <img
+                src="./img/advantage4.svg"
+                alt="Демократичные цены"
+                title="Демократичные цены"
+              />
+              <span>Доступные цены</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="wood page-section">
+          <h2 class="section-title">Колотые дрова</h2>
+          <div class="wood-container container">
+            <img
+              class="wood__img"
+              src="./img/wood1.jpg"
+              alt="Дрова"
+              title="Дрова"
+            />
+            <div class="wood-description-container">
+              <div class="wood__description">
+                <strong>Дрова березовые, осиновые, ольховые</strong>
+                <br />
+                <p>Чистая древесина без трухи, гнили и грязи!</p>
+                <br />
+                <ul>
+                  <li>- Собственное производство</li>
+                  <li>- Лес зимней заготовки</li>
+                  <li>- Доставка в день заказа</li>
+                  <li>- Возможен самовывоз</li>
+                </ul>
+                <br />
+                <p>
+                  Доставляем дрова начиная от 2 кубометров! Доставка ежедневно
+                  без выходных дней, в любое удобное для Вас время,
+                  предварительно согласовав день и время доставки. Для доставки
+                  дров имеется свой автопарк, состоящий из более тридцати
+                  грузовиков, которые готовы доставить Вам дрова практически в
+                  любое место Санкт-Петербурга и Ленинградской области.
+                </p>
+              </div>
+
+              <a class="buy-wood-button" href="" role="button">
+                Перейти к каталогу
+              </a>
+            </div>
+          </div>
+        </section>
+        <!-- <div class="section-scew"></div> -->
+
+        <section class="wood-products page-section">
+          <h2 class="section-title">Древесные изделия</h2>
+          <div class="wood-products-container container">
+            <div class="carousel-3d" data-gap="50">
+              <figure>
+                <div><img src="./img/wood-product1.jpg" alt="" /></div>
+                <div><img src="./img/no_img.jpg" alt="" /></div>
+                <div><img src="./img/no_img.jpg" alt="" /></div>
+                <div><img src="./img/no_img.jpg" alt="" /></div>
+                <div><img src="./img/no_img.jpg" alt="" /></div>
+                <div><img src="./img/no_img.jpg" alt="" /></div>
+                <div><img src="./img/no_img.jpg" alt="" /></div>
+                <div><img src="./img/no_img.jpg" alt="" /></div>
+                <div><img src="./img/no_img.jpg" alt="" /></div>
+              </figure>
+              <nav>
+                <button class="nav prev">Назад</button>
+                <button class="nav next">Вперед</button>
+              </nav>
+            </div>
+          </div>
+        </section>
+
+        <section class="about-order page-section">
+          <h2 class="section-title">Доставка и оплата</h2>
+          <div class="about-order-container container">
+            <div class="about-order-order-stages">
+              <div class="order__stage">
+                <div class="stage__number">1</div>
+                <p>Оставьте заявку</p>
+                <p>
+                  Позвоните по телефону либо оставьте заявку на сайте или в
+                  WhatsApp. Оператор уточнит тип дров, адрес и время доставки,
+                  также стоимость доставки
+                </p>
+              </div>
+              <div class="order__stage">
+                <div class="stage__number">2</div>
+                <p>Доставка и разгрузка дров</p>
+                <p>
+                  Заранее позвонит водитель и сообщит о выезде к вам. Привезем
+                  столько, сколько Вы заказали. При доставке водитель при Вас
+                  измеряет объем и вручную бесплатно выгружает.
+                </p>
+              </div>
+              <div class="order__stage">
+                <div class="stage__number">3</div>
+                <p>Оплата</p>
+                <p>
+                  Оплатить ваш заказ вы можете наличным и безналичным способом
+                  при доставке дров. Для юр. лиц оплата по счету.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="about-company page-section">
+          <div class="about-company-container container">
+            <h3 class="section-title">О компании</h3>
+            <p class="about-company__company-description">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi
+              pariatur esse tenetur repellat, deserunt possimus. Doloribus
+              veritatis voluptatum minus odit deleniti voluptatibus libero qui,
+              reiciendis dolorum beatae labore, accusamus ullam. Porro eligendi
+              consectetur quo fugiat natus. Ad at, esse ab distinctio itaque
+              odit pariatur optio nulla deserunt? Inventore recusandae, fugiat
+              praesentium maxime voluptatibus voluptas a facere reiciendis
+              voluptates distinctio ipsa. Repellendus, explicabo? Molestias,
+              ratione iure nulla corrupti vitae accusamus suscipit quae libero
+              veritatis explicabo quas aspernatur accusantium quo tempora optio,
+              neque quod eos labore dolorem rem cum unde beatae alias.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="copyright">
+          &copy OOО"Медведь" - 2023 | Все права защищены
+        </div>
+      </footer>
     </div>
   </body>
 </html>

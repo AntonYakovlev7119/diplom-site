@@ -1,0 +1,202 @@
+#site-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* max-height: 80vh; */
+  max-height: 750px;
+  height: 100%;
+  background: var(--tertiary-color);
+}
+
+.header-site-intro {
+  position: relative;
+  display: flex;
+  top: 64px;
+  margin-bottom: 80px;
+}
+
+.header-intro-left-side {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-height: 610px;
+  z-index: 999;
+}
+
+.header-intro-left-side::after {
+  content: "";
+  position: absolute;
+  background: #5c4300;
+  background: var(--tertiary-color);
+  height: 101%;
+  max-height: 615px;
+  width: calc(var(--index) * 15);
+  top: -1px;
+  right: -172px;
+  transform: skewX(-25deg);
+  z-index: 1;
+}
+
+.header-logo-container {
+  position: relative;
+  margin-left: 100px;
+  z-index: 2;
+}
+
+.header__logo {
+  display: block;
+  height: calc(var(--index) * 15);
+  max-height: 515px;
+  margin-bottom: 10px;
+}
+
+.header__company-name {
+  display: block;
+  /* color: var(--primary-font-color); */
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.header-intro-right-side {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /* max-height: 65vh; */
+  max-height: 610px;
+  z-index: 1;
+}
+
+.header-intro-right-side::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-color: var(--tertiary-color);
+  opacity: 0.6;
+  z-index: 2;
+}
+
+.header__background-image {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.header__site-description {
+  position: absolute;
+  /* font-size: calc(var(--index) * 1); */
+  font-size: calc(14px + 0.8vw);
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  line-height: 1.5em;
+  color: rgb(238, 238, 238);
+  max-width: 1325px;
+  text-shadow: 0 0 10px rgb(48, 48, 48);
+  margin-right: calc(var(--index) * 2);
+  left: calc(var(--index) * 10);
+  z-index: 3;
+}
+
+.header-nav-container {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  min-height: 64px;
+  /* max-width: 1920px; */
+  padding: 15px 0 15px 0;
+  background: var(--tertiary-color);
+  transition: min-height 0.5s;
+  z-index: 9999;
+}
+
+.header-nav-container.fixed {
+  min-height: 80px;
+  transition: min-height 0.5s;
+}
+
+.header-nav-container.fixed .nav__item,
+.header-nav-container.fixed .header__telephone {
+  font-size: calc(15px + 0.35vw);
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 50px;
+  flex-grow: 0.5;
+}
+
+.nav__item {
+  display: block;
+  font-size: calc(15px + 0.3vw);
+  font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--nav-font-color);
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  transition: var(--nav-transition);
+}
+
+.nav__item:hover {
+  color: var(--nav-font-color-hover);
+  border: 1px solid var(--nav-font-border-color);
+  transition: 0.25s ease-out;
+}
+
+.nav__item.active {
+  color: var(--nav-font-color-hover);
+}
+
+.header__telephone {
+  position: relative;
+  flex-grow: 0;
+}
+
+.header__telephone span {
+  font-size: calc(15px + 0.3vw);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  transition: var(--nav-transition);
+}
+
+.header__telephone span:hover {
+  color: var(--nav-font-color-hover);
+  transition: 0.25s ease-out;
+}
+
+.header__telephone span::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 32px;
+  width: 32px;
+  left: -36px;
+  top: -5px;
+  background: url("../img/favicon-32x32.svg");
+  background-position: center;
+  background-size: cover;
+  background-size: 32px;
+  background-repeat: no-repeat;
+  animation: 1.2s infinite telephone;
+}
+
+@keyframes telephone {
+  0% {
+    background-size: 32px;
+  }
+
+  50% {
+    background-size: 28px;
+  }
+
+  100% {
+    background-size: 32px;
+  }
+}
