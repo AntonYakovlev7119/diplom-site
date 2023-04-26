@@ -1,54 +1,73 @@
 #site-header {
   position: relative;
   background: var(--tertiary-color);
+  /* max-height: 80vh; */
+  min-height: 75vh;
 }
 
 .header-site-intro {
   position: relative;
   display: flex;
   top: 64px;
-
-  padding-bottom: 140px;
+  max-height: 60vh;
 }
 
 .header-main-left-side {
   position: relative;
   display: flex;
   align-items: center;
-  max-height: 610px;
   z-index: 999;
 }
 
-.header-main-left-side::after {
+.header-main-left-side__scew {
+  position: absolute;
+  height: 100%;
+  width: 280px;
+  /* width: 100%; */
+  right: -280px;
+}
+
+/* .header-main-left-side::after {
   content: "";
   position: absolute;
   background: #5c4300;
   background: var(--tertiary-color);
   height: 101%;
-  max-height: 615px;
   width: calc(var(--index) * 15);
   top: -1px;
   right: -172px;
   transform: skewX(-25deg);
   z-index: 1;
-}
+} */
 
 .header-logo-container {
   position: relative;
+  /* margin-top: 85px; */
   margin-left: 100px;
   z-index: 2;
 }
 
+.header-logo-container a {
+  display: block;
+}
+
 .header__logo {
   display: block;
-  height: calc(var(--index) * 15);
-  max-height: 515px;
-  margin-bottom: 10px;
+  width: calc(var(--index) * 15);
+  max-width: 365px;
+  /* max-width: 100%; */
+  /* width: 515px; */
+  /* min-height: 500px; */
+  /* margin-bottom: 10px; */
 }
+
+/* .header-logo-container a {
+  display: block;
+  height: 315px;
+} */
 
 .header__company-name {
   display: block;
-  /* color: var(--primary-font-color); */
   color: white;
   font-family: "Roboto", sans-serif;
   font-size: 40px;
@@ -61,8 +80,6 @@
   display: flex;
   align-items: center;
   width: 100%;
-  /* max-height: 65vh; */
-  max-height: 610px;
   z-index: 1;
 }
 
@@ -81,22 +98,28 @@
   display: block;
   height: 100%;
   width: 100%;
+  min-height: 60vh;
   object-fit: cover;
 }
 
 .header__site-description {
   position: absolute;
+  display: block;
   /* font-size: calc(var(--index) * 1); */
+  width: 100%;
+  z-index: 3;
+}
+
+.header__site-description span {
+  display: block;
   font-size: calc(14px + 0.8vw);
-  font-family: "Roboto", sans-serif;
   font-weight: 600;
   line-height: 1.5em;
   color: rgb(238, 238, 238);
   max-width: 1325px;
   text-shadow: 0 0 10px rgb(48, 48, 48);
-  margin-right: calc(var(--index) * 2);
-  left: calc(var(--index) * 10);
-  z-index: 3;
+  margin-right: calc(var(--index) * 1);
+  margin-left: calc(var(--index) * 10);
 }
 
 .header-nav-container {
@@ -113,7 +136,7 @@
   z-index: 9999;
 }
 
-.header-nav-container.fixed {
+.header-nav-container.scrolled {
   min-height: 80px;
   transition: min-height 0.5s;
 }

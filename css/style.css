@@ -1,7 +1,8 @@
 :root {
   --index: calc(1vh + 1vw);
   --primary-color: #f5ebe2;
-  --secondary-color: #efefef;
+  /* --secondary-color: #efefef; */
+  --secondary-color: #f5f5f5;
   --tertiary-color: rgb(39, 39, 39);
   --primary-font-color: rgb(206, 206, 206);
   --secondary-font-color: rgb(39, 39, 39);
@@ -77,7 +78,9 @@ main.page-content {
 /* Преимущества компании */
 
 .company-advantages {
-  padding: 30px 0;
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 0;
   background: var(--secondary-color);
 }
 
@@ -114,15 +117,13 @@ main.page-content {
   margin-top: 5px;
 }
 
-.section__underline {
+.section-scew {
   position: absolute;
-  display: block;
-  content: "";
-  height: 1px;
   width: 100%;
-  margin: 20px auto 0 auto;
-  background: rgb(134, 134, 134);
-  border-radius: 50%;
+  /* height: auto; */
+  height: 100%;
+  max-height: 240px;
+  z-index: 999;
 }
 
 /* О комапании */
@@ -145,7 +146,7 @@ main.page-content {
 /* Дрова */
 
 .wood {
-  /* padding: 0 200px; */
+  padding: 150px 0 100px 0;
   background: var(--primary-color);
 }
 
@@ -198,11 +199,6 @@ main.page-content {
   color: var(--primary-color);
   transition: var(--btn-transition);
 }
-
-/* .section-scew {
-  height: 50px;
-  width: 100%;
-} */
 
 /* Древесеные изделия */
 
@@ -398,61 +394,4 @@ footer {
   background: var(--btn-bg-color);
   border-radius: 10px;
   cursor: pointer;
-}
-
-@media screen and (max-width: 1024px) {
-  .wood__description {
-    max-width: 650px;
-    width: 100%;
-    margin-left: 0;
-  }
-}
-
-@media screen and (max-width: 905px) {
-  .header-site-intro {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .header-main-left-side {
-    margin: 0 auto;
-  }
-
-  .header-logo-container {
-    margin-left: 0 !important;
-    margin-bottom: 20px;
-    margin-top: 50px;
-  }
-
-  .header-main-left-side::after {
-    display: none;
-  }
-
-  .header-main-right-side {
-    justify-content: center !important;
-    align-items: center !important;
-  }
-
-  .header__site-description {
-  }
-
-  .header-nav-container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .wood-product-description-container,
-  .wood-description-container {
-    width: 90vw;
-  }
-
-  .wood-product-description-container {
-    margin-right: 0;
-    margin-bottom: 30px;
-  }
-
-  .wood-description-container {
-    margin-left: 0;
-    margin-top: 30px;
-  }
 }
