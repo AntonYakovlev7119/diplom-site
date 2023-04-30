@@ -6,14 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/catalog.css" />
     <link rel="stylesheet" href="../css/footer.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-
+    <link rel="stylesheet" href="../css/media.css" />
     <script src="../js/app.js" defer></script>
     <title>ООО "Медведь"</title>
   </head>
@@ -23,16 +18,17 @@
         <div class="header-nav-container">
           <nav>
             <a class="nav__item" href="../index.html">Главная</a>
-            <a class="nav__item active" href="./drova.html">Продукция</a>
+            <a class="nav__item active" href="./catalog.html">Продукция</a>
             <a class="nav__item" href="./contacts.html">Контакты</a>
           </nav>
           <a class="header__telephone" href="tel:+79314325544">
-            <!-- <i class="fa-light fa-phone-volume fa-beat" style="color: #8d8410;"></i> -->
             <span>+79314325544</span>
           </a>
         </div>
-        <div class="header-site-intro">
-          <div class="header-main-left-side">
+
+        <div class="header-inner">
+          <div class="header__mobile-background"></div>
+          <div class="header-inner-left-side">
             <div class="header-logo-container">
               <a href="../index.html">
                 <img class="header__logo" src="../img/logo3.png" alt="logo" />
@@ -41,7 +37,7 @@
                 >ООО<br />&laquoМедведь&raquo</span
               >
             </div>
-            <div class="header-main-left-side__scew">
+            <div class="header-inner-left-side__scew">
               <svg
                 width="100%"
                 height="100%"
@@ -58,12 +54,7 @@
               </svg>
             </div>
           </div>
-          <div class="header-main-right-side">
-            <img
-              class="header__background-image"
-              src="../img/header-background.jpg"
-              alt=""
-            />
+          <div class="header-inner-right-side">
             <div class="header__site-description">
               <span>
                 Доставка дров, древесных изделий, перевозка грузов, расчистка
@@ -73,7 +64,9 @@
           </div>
         </div>
       </header>
+
       <main>
+        <h1 class="page-title">Каталог</h1>
         <section class="products">
           <div class="products-container container">
             <div class="product">

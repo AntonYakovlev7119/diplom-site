@@ -6,15 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/media.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-
     <script src="./js/app.js" defer></script>
     <title>ООО "Медведь"</title>
   </head>
@@ -24,17 +18,17 @@
         <div class="header-nav-container">
           <nav>
             <a class="nav__item active" href="index.html">Главная</a>
-            <a class="nav__item" href="./pages/drova.html">Продукция</a>
+            <a class="nav__item" href="./pages/catalog.html">Продукция</a>
             <a class="nav__item" href="./pages/contacts.html">Контакты</a>
           </nav>
           <a class="header__telephone" href="tel:+79314325544">
-            <!-- <i class="fa-light fa-phone-volume fa-beat" style="color: #8d8410;"></i> -->
-            <span>+79314325544</span>
+            <span>+7(931)4325544</span>
           </a>
         </div>
 
-        <div class="header-site-intro">
-          <div class="header-main-left-side">
+        <div class="header-inner">
+          <div class="header__mobile-background"></div>
+          <div class="header-inner-left-side">
             <div class="header-logo-container">
               <a href="index.html">
                 <img class="header__logo" src="./img/logo3.png" alt="logo" />
@@ -43,7 +37,7 @@
                 >ООО<br />&laquoМедведь&raquo</span
               >
             </div>
-            <div class="header-main-left-side__scew">
+            <div class="header-inner-left-side__scew">
               <svg
                 width="100%"
                 height="100%"
@@ -60,12 +54,7 @@
               </svg>
             </div>
           </div>
-          <div class="header-main-right-side">
-            <img
-              class="header__background-image"
-              src="./img/header-background.jpg"
-              alt=""
-            />
+          <div class="header-inner-right-side">
             <div class="header__site-description">
               <span>
                 Доставка дров, древесных изделий, перевозка грузов, расчистка
@@ -75,9 +64,9 @@
           </div>
         </div>
       </header>
+
       <main>
         <section class="company-advantages page-section">
-          <!-- <h3 class="section-title">Наши преимущества</h3> -->
           <div class="company-advantages-container container">
             <div class="company__advantage">
               <img
@@ -112,6 +101,7 @@
               <span>Доступные цены</span>
             </div>
           </div>
+
           <div class="section-scew">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -142,32 +132,22 @@
               title="Дрова"
             />
             <div class="wood-description-container">
-              <div class="wood__description">
-                <strong>Дрова березовые, осиновые, ольховые</strong>
-                <br />
-                <p>Чистая древесина без трухи, гнили и грязи!</p>
-                <br />
-                <ul>
-                  <li>- Собственное производство</li>
-                  <li>- Лес зимней заготовки</li>
-                  <li>- Доставка в день заказа</li>
-                  <li>- Возможен самовывоз</li>
-                </ul>
-                <br />
-                <p>
-                  Доставляем дрова начиная от 2 кубометров! Доставка ежедневно
-                  без выходных дней, в любое удобное для Вас время,
-                  предварительно согласовав день и время доставки. Для доставки
-                  дров имеется свой автопарк, состоящий из более тридцати
-                  грузовиков, которые готовы доставить Вам дрова практически в
-                  любое место Санкт-Петербурга и Ленинградской области.
+              <p class="wood__description"><strong>Дрова березовые, осиновые, ольховые</strong>
+Чистая древесина без трухи, гнили и грязи!
+
+    - Собственное производство</li>
+    - Лес зимней заготовки</li>
+    - Доставка в день заказа</li>
+    - Возможен самовывоз</li>
+              
+Доставляем дрова начиная от 2 кубометров! Доставка ежедневнобез выходных дней, в любое удобное для Вас время, предварительно согласовав день и время доставки. Для доставки дров имеется свой автопарк, состоящий из более тридцати грузовиков, которые готовы доставить Вам дрова практически в любое место Санкт-Петербурга и Ленинградской области.
                 </p>
-              </div>
+              </p>
 
               <a class="buy-wood__button" href="" role="button">
                 Перейти к каталогу
               </a>
-            </div>
+            
           </div>
         </section>
 
@@ -175,26 +155,15 @@
           <h2 class="section-title">Древесные изделия</h2>
           <div class="wood-products-container container">
             <div class="wood-product-description-container">
-              <div class="wood-product__description">
-                <strong>
-                  Деревянные доски разных сортов, брусья, вырезные изделия такие
-                  как:
-                </strong>
+              <p class="wood-product__description"><strong>Деревянные доски разных сортов, брусья, вырезные изделия такие как:</strong>
+                
+- Пластина
+- Необрезанная доска
+- Трёхактный брус с обзолом
+- Строганные шпунтованные изделия
 
-                <ul>
-                  <li>- Пластина</li>
-                  <li>- Необрезанная доска</li>
-                  <li>- Трёхактный брус с обзолом</li>
-                  <li>- Строганные шпунтованные изделия</li>
-                </ul>
-                <br />
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Repudiandae soluta tempore omnis labore illum neque unde
-                  ducimus, dignissimos praesentium aut, ullam aspernatur ea sit
-                  harum mollitia facilis dolore aliquam vel!
-                </p>
-              </div>
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae soluta tempore omnis labore illum neque unde ducimus, dignissimos praesentium aut, ullam aspernatur ea sit harum mollitia facilis dolore aliquam vel!  
+              </p>
               <a class="buy-wood-product__button" href="" role="button">
                 Перейти к каталогу
               </a>
@@ -244,7 +213,7 @@
 
         <section class="about-company page-section">
           <div class="about-company-container container">
-            <h3 class="section-title">О компании</h3>
+            <h2 class="section-title">О компании</h2>
             <p class="about-company__company-description">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi
               pariatur esse tenetur repellat, deserunt possimus. Doloribus

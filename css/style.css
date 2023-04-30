@@ -1,7 +1,6 @@
 :root {
   --index: calc(1vh + 1vw);
   --primary-color: #f5ebe2;
-  /* --secondary-color: #efefef; */
   --secondary-color: #f5f5f5;
   --tertiary-color: rgb(39, 39, 39);
   --primary-font-color: rgb(206, 206, 206);
@@ -12,6 +11,10 @@
   --nav-transition: 0.5s ease;
   --btn-transition: 0.35s ease;
   --btn-bg-color: rgb(165 115 54);
+  --header-inner-padding-top-desktop: 64px;
+  --header-inner-padding-top-mobile: 80px;
+  --header-inner-padding-bottom-desktop: 80px;
+  --header-inner-padding-bottom-mobile: 50px;
 }
 
 *,
@@ -24,20 +27,20 @@
 
 html {
   height: 100%;
+  width: 100%;
 }
 
 body {
-  display: flex;
-  justify-content: center;
   height: 100%;
   font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .page-layout {
   position: relative;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   width: 100%;
-  /* overflow-x: hidden; */
 }
 
 ul {
@@ -49,14 +52,23 @@ a {
   color: var(--secondary-font-color);
 }
 
-h1 {
+h1.page-title {
+  font-size: calc(22px + 1vw);
+  font-weight: 600;
+  /* padding: 20px 0; */
+  padding-top: 40px;
+  text-align: center;
+  background: var(--primary-color);
+}
+
+/* h2 {
   margin: 20px 0;
   text-align: center;
-}
+} */
 
 .section-title {
   font-size: calc(15px + 1vw);
-  font-family: "Roboto", sans-serif;
+  font-weight: 600;
   color: var(--secondary-font-color);
   margin-bottom: 80px;
   text-align: center;
@@ -73,325 +85,4 @@ main.page-content {
 .page-section {
   position: relative;
   padding: 100px 0;
-}
-
-/* Преимущества компании */
-
-.company-advantages {
-  position: relative;
-  padding-top: 30px;
-  padding-bottom: 0;
-  background: var(--secondary-color);
-}
-
-.company-advantages h3 {
-  margin-bottom: 30px !important;
-}
-
-.company-advantages-container {
-  display: flex;
-  justify-content: center;
-  gap: calc(var(--index) * 5);
-  padding: 0 30px;
-  flex-wrap: wrap;
-}
-
-.company__advantage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 150px;
-  text-align: center;
-}
-
-.company__advantage img {
-  height: calc(var(--index) * 3);
-  max-height: 250px;
-  width: auto;
-}
-
-.company__advantage span {
-  display: block;
-  font-size: calc(15px + 0.4vw);
-  font-weight: 200;
-  margin-top: 5px;
-}
-
-.section-scew {
-  position: absolute;
-  width: 100%;
-  /* height: auto; */
-  height: 100%;
-  max-height: 240px;
-  z-index: 999;
-}
-
-/* О комапании */
-
-.about-company {
-  background: var(--secondary-color);
-}
-
-.about-company h3 {
-  text-align: start;
-  margin-bottom: 40px;
-  margin-left: 80px;
-}
-
-.about-company__company-description {
-  margin: 0 105px;
-  font-size: calc(15px + 0.5vw);
-}
-
-/* Дрова */
-
-.wood {
-  padding: 150px 0 100px 0;
-  background: var(--primary-color);
-}
-
-.wood-container {
-  display: flex;
-  justify-content: center;
-  /* gap: calc(var(--index) * 5); */
-  flex-wrap: wrap;
-}
-
-.wood__img {
-  height: calc(var(--index) * 15);
-  box-shadow: 0 5px 18px rgb(117, 117, 117);
-  border-radius: 10px;
-  border: 5px solid var(--tertiary-color);
-}
-
-.wood-description-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 45vw;
-  /* margin-top: 30px; */
-}
-
-.wood__description {
-  display: block;
-  font-size: calc(15px + 0.5vw);
-  text-shadow: 0 0px 1px rgb(187, 187, 187);
-  margin-left: 100px;
-}
-
-.buy-wood__button {
-  font-size: calc(15px + 0.8vw);
-  font-weight: 300;
-  color: var(--btn-bg-color);
-  /* color: rgb(179 153 84); */
-  margin-top: 30px;
-  padding: 5px 10px;
-  background: transparent;
-  border: 2px solid var(--btn-bg-color);
-  border-radius: 10px;
-  transition: var(--btn-transition);
-  cursor: pointer;
-}
-
-.buy-wood__button:hover {
-  background: var(--btn-bg-color);
-  /* background: rgb(193 163 84); */
-  color: var(--primary-color);
-  transition: var(--btn-transition);
-}
-
-/* Древесеные изделия */
-
-.wood-products {
-  background: var(--secondary-color);
-}
-
-.wood-products-container {
-  display: flex;
-  justify-content: center;
-  /* gap: calc(var(--index) * 5); */
-  flex-wrap: wrap;
-}
-
-.wood-product-description-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 45vw;
-}
-
-.wood-product__img {
-  height: calc(var(--index) * 15);
-  box-shadow: 0 5px 18px rgb(117, 117, 117);
-  border-radius: 10px;
-  border: 5px solid var(--tertiary-color);
-}
-
-.wood-product__description {
-  display: block;
-  font-size: calc(15px + 0.5vw);
-  text-shadow: 0 0px 1px rgb(187, 187, 187);
-  margin-right: 100px;
-}
-
-.wood-product__description ul {
-  margin-top: 20px;
-}
-
-.buy-wood-product__button {
-  font-size: calc(15px + 0.8vw);
-  font-weight: 300;
-  color: var(--btn-bg-color);
-  /* color: rgb(179 153 84); */
-  margin-top: 30px;
-  padding: 5px 10px;
-  background: transparent;
-  border: 2px solid var(--btn-bg-color);
-  border-radius: 10px;
-  transition: var(--btn-transition);
-  cursor: pointer;
-}
-
-.buy-wood-product__button:hover {
-  background: var(--btn-bg-color);
-  /* background: rgb(193 163 84); */
-  color: var(--primary-color);
-  transition: var(--btn-transition);
-}
-
-/* Как заказать */
-
-.about-order {
-  background: var(--primary-color);
-}
-
-.about-order-container {
-  /* display: block; */
-}
-
-.about-order-order-stages {
-  display: flex;
-  justify-content: center;
-  /* align-items: center; */
-  flex-wrap: wrap;
-  gap: calc(var(--index) * 3);
-}
-
-.order__stage {
-  position: relative;
-  display: block;
-  /* background: #e7d9cd; */
-  background: #f7f7f7;
-  max-height: 250px;
-  max-width: 360px;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 3px 8px grey, 0 7px 24px grey;
-}
-
-.stage__number {
-  content: "";
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 35px;
-  width: 35px;
-  top: -12px;
-  left: -12px;
-  font-size: 18px;
-  font-weight: 600;
-  background: var(--btn-bg-color);
-  border-radius: 50%;
-}
-
-.order__stage p:nth-child(2) {
-  font-weight: 600;
-  font-size: calc(15px + 0.3vw);
-  margin-bottom: 10px;
-}
-
-.order__stage p {
-  font-size: calc(15px + 0.2vw);
-}
-
-/* Футер */
-
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 10vh;
-  font-size: calc(15px + 0.3vw);
-  color: var(--nav-font-color);
-  background: var(--tertiary-color);
-}
-
-.copyright {
-}
-
-/* Контакты */
-
-.contacts__email,
-.contacts__telephone {
-  font-size: calc(15px + 0.3vw);
-  margin-left: 50px;
-}
-
-.contacts__email {
-  margin-bottom: 20px;
-}
-.contacts__telephone {
-  margin-bottom: 20px;
-}
-
-/* Продукция */
-
-.products {
-  background: var(--primary-color);
-}
-
-.products-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: calc(var(--index) * 3);
-  padding: 60px;
-}
-
-.product {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 440px;
-  width: 370px;
-  padding: 10px;
-  background-color: var(--primary-color);
-  border: 3px solid var(--tertiary-color);
-  border-radius: 20px;
-}
-
-.product img {
-  max-height: 500px;
-  width: 100%;
-  border-radius: 20px;
-  border: 1 px solid var(--tertiary-color);
-}
-
-.title {
-  font-size: calc(15px + 0.4vw);
-  font-weight: 600;
-}
-
-.price {
-  font-size: calc(15px + 0.3vw);
-}
-
-.buy-product__button {
-  font-size: calc(15px + 0.4vw);
-  padding: 10px;
-  margin-top: 30px;
-  color: var(--primary-color);
-  background: var(--btn-bg-color);
-  border-radius: 10px;
-  cursor: pointer;
 }

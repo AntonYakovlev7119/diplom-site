@@ -1,0 +1,14 @@
+/* Контакты */
+
+.contacts__email,
+.contacts__telephone {
+  font-size: calc(15px + 0.3vw);
+  margin-left: 50px;
+}
+
+.contacts__email {
+  margin-bottom: 20px;
+}
+.contacts__telephone {
+  margin-bottom: 20px;
+}
