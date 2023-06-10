@@ -1,0 +1,79 @@
+<%-include("../__blocks/__header.ejs") %>
+
+<main class="page-content">
+  <h1 class="page-title">Контакты</h1>
+  <section class="contacts">
+    <div class="contacts-container container">
+      <p class="contacts__email">
+        <strong>Email: </strong><%= content.email %>
+      </p>
+      <p class="contacts__telephone">
+        <strong>Телефон: </strong><%= content.telephone %>
+      </p>
+      <p class="contacts__adress">
+        <strong>Адрес: </strong><%= content.adress %>
+      </p>
+    </div>
+  </section>
+
+  <div class="cart">
+    <div class="cart-container">
+      <div class="cart__close-cross">
+        <img src="../img/close-cross-2.png" alt="" />
+      </div>
+      <div class="cart__product">
+        <div class="cart__product-container">
+          <img class="cart-product__img" src="../img/no_img.jpg" alt="" />
+          <p class="cart-product__name">Древесина хорошая</p>
+          <p class="cart-product__price">1400р.</p>
+          <div class="cart-product-count-container">
+            <img
+              class="cart-product__decrease-count"
+              src="../img/minus.png"
+              alt=""
+            />
+            <p class="cart-product__count">55 шт.</p>
+            <img
+              class="cart-product__increase-count"
+              src="../img/plus.png"
+              alt=""
+            />
+          </div>
+          <p class="cart-product__delete">Удалить</p>
+        </div>
+      </div>
+
+      <div class="cart__product">
+        <div class="cart__product-container">
+          <img class="cart-product__img" src="../img/no_img.jpg" alt="" />
+          <p class="cart-product__name">Древесина хорошая</p>
+          <p class="cart-product__price">1400р.</p>
+          <div class="cart-product-count-container">
+            <img
+              class="cart-product__decrease-count"
+              src="../img/minus.png"
+              alt=""
+            />
+            <p class="cart-product__count">55 шт.</p>
+            <img
+              class="cart-product__increase-count"
+              src="../img/plus.png"
+              alt=""
+            />
+          </div>
+          <p class="cart-product__delete">Удалить</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cart-dark-canvas"></div>
+
+  <div class="cart-icon">
+    <img src="./img/cart-icon.png" alt="" />
+  </div>
+
+  <a class="sroll-top-button" href="#body"></a>
+</main>
+
+<%-include("../__blocks/__footer.ejs") %>

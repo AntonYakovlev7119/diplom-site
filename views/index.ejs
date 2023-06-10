@@ -1,0 +1,144 @@
+<%-include("./__blocks/__header.ejs") %>
+
+      <main class="page-content">
+        <section class="company-advantages page-section">
+          <div class="company-advantages-container container">
+            <div class="company__advantage">
+              <img
+                src="./img/advantage1.png"
+                alt="Индивидуальный подход"
+                title="Индивидуальный подход"
+              />
+              <span>Индивидуальный подход</span>
+            </div>
+            <div class="company__advantage">
+              <img
+                src="./img/advanatge2.png"
+                alt="Индивидуальный подход"
+                title="Индивидуальный подход"
+              />
+              <span>Собственное производство</span>
+            </div>
+            <div class="company__advantage">
+              <img
+                src="./img/advanatge3.png"
+                alt="Высокое качество"
+                title="Высокое качество"
+              />
+              <span>Высокое качество</span>
+            </div>
+            <div class="company__advantage">
+              <img
+                src="./img/advantage4.svg"
+                alt="Демократичные цены"
+                title="Демократичные цены"
+              />
+              <span>Доступные цены</span>
+            </div>
+          </div>
+
+          <div class="section-scew">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:svg="http://www.w3.org/2000/svg"
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 210 297"
+              version="1.1"
+            >
+              <path
+                style="fill: var(--secondary-color)"
+                stroke-width="0.201389"
+                d="M 210, 0 H 0
+              l 105, 140 z"
+              />
+            </svg>
+          </div>
+        </section>
+
+        <section class="wood page-section">
+          <h2 class="section-title">Колотые дрова</h2>
+          <div class="wood-container container">
+            <img
+              class="wood__img"
+              src="./img/wood1.jpg"
+              alt="Дрова"
+              title="Дрова"
+            />
+            <div class="wood-description-container text-container">
+              <p class="wood__description"><%= content.wood_desc %></p>
+              <a class="buy-wood__button" href="/catalog" role="button">
+                Перейти к каталогу
+              </a>
+            
+          </div>
+        </section>
+
+        <section class="wood-products page-section">
+          <h2 class="section-title">Древесные изделия</h2>
+          <div class="wood-products-container container">
+            <div class="wood-product-description-container text-container">
+              <p class="wood-product__description"><%= content.wood_product_desc %></p>
+              <a class="buy-wood-product__button" href="/catalog" role="button">
+                Перейти к каталогу
+              </a>
+            </div>
+            <img
+              class="wood-product__img"
+              src="./img/wood-product1.jpg"
+              alt="Дрова"
+              title="Дрова"
+            />
+          </div>
+        </section>
+
+        <section class="about-order page-section">
+          <h2 class="section-title">Доставка и оплата</h2>
+          <div class="about-order-container container">
+            <div class="about-order-order-stages">
+              <div class="order__stage">
+                <div class="stage__number">1</div>
+                <p>Оставьте заявку</p>
+                <p>
+                  Позвоните по телефону либо оставьте заявку на сайте или в
+                  WhatsApp. Оператор уточнит тип дров, адрес и время доставки,
+                  также стоимость доставки
+                </p>
+              </div>
+              <div class="order__stage">
+                <div class="stage__number">2</div>
+                <p>Доставка и разгрузка дров</p>
+                <p>
+                  Заранее позвонит водитель и сообщит о выезде к вам. Привезем
+                  столько, сколько Вы заказали. При доставке водитель при Вас
+                  измеряет объем и вручную бесплатно выгружает.
+                </p>
+              </div>
+              <div class="order__stage">
+                <div class="stage__number">3</div>
+                <p>Оплата</p>
+                <p>
+                  Оплатить ваш заказ вы можете наличным и безналичным способом
+                  при доставке дров. Для юр. лиц оплата по счету.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="about-company page-section">
+          <div class="about-company-container container">
+            <h2 class="section-title">О компании</h2>
+            <p class="about-company__company-description"><%= content.company_desc %></p>
+          </div>
+        </section>
+
+        <div class="cart-icon">
+          <img src="./img/cart-icon.png" alt="" />
+        </div>
+      
+        <a class="sroll-top-button" href="#body"></a>
+      </main>
+
+<%-include("./__blocks/__footer.ejs") %>

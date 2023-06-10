@@ -1,0 +1,256 @@
+<%-include("./__blocks/__admin_header.ejs") %>
+
+<main>
+  <%if(req.path === "/cms"){ %>
+  <div class="cms-content">
+    <select name="section_select" id="section_select">
+      <option value="">-- Выбор секции --</option>
+      <% Object.entries(content).forEach((elem)=>{ %>
+      <option value="<%= elem[0] %>"><%= elem[1].name %></option>
+      <% }) %>
+    </select>
+    <form class="cms_managment" action="" method="post">
+      <h2 class="title"></h2>
+      <textarea
+        name="content"
+        id="cms_text_area"
+        cols="30"
+        rows="10"
+      ></textarea>
+      <button class="save_changes_button" type="submit">
+        Подтвердить изменения
+      </button>
+    </form>
+  </div>
+
+  <% } %> <%if(req.path === "/catalog_management"){ %>
+  <div class="catalog-managment-panel">
+    <div class="managment-menu">
+      <button class="add__product" onclick="selectAction('add')">
+        Добавить
+      </button>
+      <button class="edit__product" onclick="selectAction('edit')">
+        Редактировать
+      </button>
+      <button class="delete__product" onclick="selectAction('delete')">
+        Удалить
+      </button>
+    </div>
+
+    <div class="product-select-container">
+      <select name="product-select" id="product-select">
+        <option>-- Выбор товара --</option>
+        <% products.forEach((elem)=>{ %>
+        <option value="<%= elem.id %>"><%= elem.title %></option>
+        <% }) %>
+      </select>
+    </div>
+
+    <form
+      method="post"
+      id="product-characteristics"
+      enctype="multipart/form-data"
+    >
+      <img
+        src="../img/no_img.jpg"
+        alt="Картинка товара"
+        id="product__img-view"
+      />
+
+      <label>Добавить изображение</label>
+      <label class="product__img">
+        <input
+          type="file"
+          name="img_file"
+          id="img_file"
+          onchange="getImage()"
+        />
+        <span class="product__img-btn">Выберите файл</span>
+        <span class="product__img-text">Файл не выбран</span>
+      </label>
+
+      <label for="product__name">Наименование</label>
+      <input type="text" name="product__name" id="product__name" />
+
+      <label for="product__description">Описание</label>
+      <textarea
+        type="text"
+        name="product__description"
+        id="product__description"
+      ></textarea>
+
+      <label for="product__price">Цена</label>
+      <input type="text" name="product__price" id="product__price" />
+
+      <button type="submit"></button>
+    </form>
+  </div>
+
+  <% } %> <%if(req.path === "/orders"){ %>
+  <div class="orders-panel">
+    <div class="orders-filter-menu"></div>
+
+    <div class="orders">
+      <table class="orders-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Клиент</th>
+            <th>Телефон</th>
+            <th>Количество товаров</th>
+            <th>Тип заявки</th>
+            <th>Дата</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="order">
+            <td>55</td>
+            <td>Игорь</td>
+            <td>+7943434443</td>
+            <td>433</td>
+            <td>заказ</td>
+            <td>12.10.2021</td>
+          </tr>
+          <tr class="order">
+            <td>55</td>
+            <td>Игорь</td>
+            <td>+7943434443</td>
+            <td>433</td>
+            <td>заказ</td>
+            <td>12.10.2021</td>
+          </tr>
+          <tr class="order">
+            <td>55</td>
+            <td>Игорь</td>
+            <td>+7943434443</td>
+            <td>433</td>
+            <td>заказ</td>
+            <td>12.10.2021</td>
+          </tr>
+          <tr class="order">
+            <td>55</td>
+            <td>Игорь</td>
+            <td>+7943434443</td>
+            <td>433</td>
+            <td>заказ</td>
+            <td>12.10.2021</td>
+          </tr>
+          <tr class="order">
+            <td>55</td>
+            <td>Игорь</td>
+            <td>+7943434443</td>
+            <td>433</td>
+            <td>заказ</td>
+            <td>12.10.2021</td>
+          </tr>
+          <tr class="order">
+            <td>55</td>
+            <td>Игорь</td>
+            <td>+7943434443</td>
+            <td>433</td>
+            <td>заказ</td>
+            <td>12.10.2021</td>
+          </tr>
+          <tr class="order">
+            <td>55</td>
+            <td>Игорь</td>
+            <td>+7943434443</td>
+            <td>433</td>
+            <td>заказ</td>
+            <td>12.10.2021</td>
+          </tr>
+          <tr class="order">
+            <td>55</td>
+            <td>Игорь</td>
+            <td>+7943434443</td>
+            <td>433</td>
+            <td>заказ</td>
+            <td>12.10.2021</td>
+          </tr>
+          <tr class="order">
+            <td>55</td>
+            <td>Игорь</td>
+            <td>+7943434443</td>
+            <td>433</td>
+            <td>заказ</td>
+            <td>12.10.2021</td>
+          </tr>
+          <tr class="order">
+            <td>55</td>
+            <td>Игорь</td>
+            <td>+7943434443</td>
+            <td>433</td>
+            <td>заказ</td>
+            <td>12.10.2021</td>
+          </tr>
+          <tr class="order">
+            <td>55</td>
+            <td>Игорь</td>
+            <td>+7943434443</td>
+            <td>433</td>
+            <td>заказ</td>
+            <td>12.10.2021</td>
+          </tr>
+          <tr class="order">
+            <td>55</td>
+            <td>Игорь</td>
+            <td>+7943434443</td>
+            <td>433</td>
+            <td>заказ</td>
+            <td>12.10.2021</td>
+          </tr>
+          <tr class="order">
+            <td>55</td>
+            <td>Игорь</td>
+            <td>+7943434443</td>
+            <td>433</td>
+            <td>заказ</td>
+            <td>12.10.2021</td>
+          </tr>
+          <tr class="order">
+            <td>55</td>
+            <td>Игорь</td>
+            <td>+7943434443</td>
+            <td>433</td>
+            <td>заказ</td>
+            <td>12.10.2021</td>
+          </tr>
+          <tr class="order">
+            <td>55</td>
+            <td>Игорь</td>
+            <td>+7943434443</td>
+            <td>433</td>
+            <td>заказ</td>
+            <td>12.10.2021</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <% } %>
+</main>
+
+<div class="order-content active">
+  <p class="order-title">Заказ №344</p>
+
+  <div class="order-content-container">
+    <div class="cart__close-cross">
+      <img src="../img/close-cross-2.png" alt="Закрыть" />
+    </div>
+
+    <div class="order__product">
+        <img class="order-product__img" src="../img/no_img.jpg" alt="Картинка товара" />
+        <p class="order-product__name">Древесина хорошая</p>
+        <p class="order-product__price">1400р.</p>
+        <p class="order-product__count">55 шт.</p>
+    </div>
+  </div>
+    
+</div>
+
+<div class="dark-canvas active"></div>
+
+</div>
+</div>
+</body>
+</html>

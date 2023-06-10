@@ -1,0 +1,304 @@
+#site-header {
+  position: relative;
+  background: var(--tertiary-color);
+  /* min-height: 100vh; */
+  height: 100vh;
+  padding-bottom: var(--header-inner-padding-bottom-desktop);
+}
+
+.header-inner {
+  position: relative;
+  display: flex;
+  height: 100%;
+  padding-top: 90px;
+  /* padding-top: var(--header-inner-padding-top-desktop); */
+  background-image: url("../img/header-background.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.header-inner::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0;
+  background-color: var(--tertiary-color);
+  opacity: 0.6;
+  /* z-index: 10; */
+}
+
+.header-inner::after {
+  content: "";
+  position: absolute;
+  height: 90px;
+  width: 100%;
+  top: 0;
+  /* background-color: var(--tertiary-color); */
+  opacity: 0.9;
+}
+
+.header-inner-bottom-gradient {
+  position: absolute;
+  height: 30px;
+  width: 100%;
+  bottom: 0;
+  background: linear-gradient(rgb(39, 39, 39, 0.1), rgba(39, 39, 39) 80%);
+  /* opacity: 0.6; */
+}
+
+.header-inner-left-side {
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* height: calc(100% + 1px); */
+  height: 100%;
+  /* height: calc(100% - 30px); */
+  /* top: 0px; */
+  margin-bottom: 30px;
+  background: var(--tertiary-color);
+  /* background: linear-gradient(rgb(39, 39, 39) 30%, rgba(39, 39, 39, 0.85)); */
+  opacity: 0.89;
+  z-index: 999;
+}
+
+.header-inner-left-side__scew {
+  position: absolute;
+  /* height: calc(100% + 1px); */
+  height: 100%;
+  width: 65%;
+  width: 80%;
+  /* top: -1px; */
+  left: calc(100% - 1px);
+  opacity: 0.96;
+  z-index: 99;
+}
+
+.header-inner-left-side__scew path {
+  fill: var(--tertiary-color);
+}
+
+.header-logo-container {
+  position: relative;
+  margin-left: 100px;
+  z-index: 2;
+}
+
+.header-logo-container a {
+  display: block;
+}
+
+.header__logo {
+  display: block;
+  width: calc(var(--index) * 16);
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.header__company-name {
+  display: block;
+  color: white;
+  font-family: "Montserrat";
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1em;
+  text-align: center;
+}
+
+.header-inner-right-side {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+}
+
+/* .header-inner-right-side::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-color: var(--tertiary-color);
+  opacity: 0.6;
+  z-index: 2;
+} */
+
+.header__site-description {
+  position: absolute;
+  display: block;
+  width: 100%;
+  font-family: "Montserrat";
+  font-weight: 500;
+  z-index: 999;
+}
+
+.header__site-description span {
+  display: block;
+  font-size: calc(14px + 0.8vw);
+  font-weight: 600;
+  line-height: 1.5em;
+  color: rgb(238, 238, 238);
+  max-width: 1325px;
+  text-shadow: 0 0 10px rgb(48, 48, 48);
+  margin-right: calc(var(--index) * 1);
+  margin-left: calc(var(--index) * 10);
+}
+
+.header-nav-container {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  min-height: 90px;
+  padding: 15px 0 15px 0;
+  /* background: var(--tertiary-color); */
+  /* background: linear-gradient(rgb(39, 39, 39) 30%, rgba(39, 39, 39, 0.85)); */
+  /* opacity: 0.7; */
+  background: linear-gradient(rgb(39, 39, 39) 5%, rgba(39, 39, 39, 0.85));
+  /* transition: min-height 0.5s; */
+  transition: 0.5s;
+  z-index: 1000;
+}
+
+.header-nav-container.scrolled {
+  /* min-height: 80px; */
+  /* background: var(--tertiary-color); */
+  background: linear-gradient(rgb(39, 39, 39), rgba(39, 39, 39));
+  /* transition: min-height 0.5s; */
+  /* background: rgb(39, 39, 39); */
+  transition: 0.5s;
+}
+
+.header-nav-container.scrolled .nav__item,
+.header-nav-container.scrolled .header__telephone span {
+  font-size: var(--nav__item-font-size-scrolled);
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 50px;
+  flex-grow: 0.5;
+}
+
+.nav__item {
+  display: block;
+  font-size: var(--nav__item-font-size);
+  font-weight: 500;
+  color: var(--nav-font-color);
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  transition: var(--nav-transition);
+}
+
+.nav__item:hover {
+  color: var(--nav-font-color-hover);
+  border: 1px solid var(--nav-font-border-color);
+  transition: 0.25s ease-out;
+}
+
+.nav__item.active {
+  color: var(--nav-font-color-hover);
+}
+
+.header__telephone {
+  position: relative;
+  flex-grow: 0;
+}
+
+.header__telephone span {
+  font-size: calc(15px + 0.3vw);
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: white;
+  transition: var(--nav-transition);
+}
+
+.header__telephone span:hover {
+  color: var(--nav-font-color-hover);
+  transition: 0.25s ease-out;
+}
+
+.header__telephone span::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 32px;
+  width: 32px;
+  left: -36px;
+  top: -5px;
+  background: url("../img/telephone-icon-32x32.svg");
+  background-position: center;
+  background-size: cover;
+  background-size: 32px;
+  background-repeat: no-repeat;
+  animation: 1.2s infinite telephone;
+}
+
+/* Мобильная навигация */
+
+.header-nav-container.active {
+  min-height: 280px;
+}
+
+/* Кнопка меню */
+
+.toggle-menu {
+  display: none;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+.toggle-menu span {
+  display: block;
+  position: absolute;
+  top: 22px;
+  left: 6px;
+  right: 6px;
+  height: 3px;
+  background: white;
+  border-radius: 10px;
+}
+.toggle-menu span:before,
+.toggle-menu span:after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: white;
+}
+.toggle-menu span:before {
+  top: -15px;
+  border-radius: 10px;
+}
+.toggle-menu span:after {
+  bottom: -15px;
+  border-radius: 10px;
+}
+
+/* --------------------------------------------- */
+
+@keyframes telephone {
+  0% {
+    background-size: 32px;
+  }
+
+  50% {
+    background-size: 28px;
+  }
+
+  100% {
+    background-size: 32px;
+  }
+}
