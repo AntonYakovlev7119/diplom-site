@@ -1,6 +1,6 @@
 const sqlite3 = require("sqlite3").verbose();
 const db = new sqlite3.Database("medvedDB.db");
-const bcrypt = require("bcrypt");
+const fs = require("fs");
 const Content = require("../models/Content");
 const ApiError = require("../models/Error");
 let content = {};
@@ -119,14 +119,27 @@ class Admin {
       const product_title = req.body.product__name;
       const product_desc = req.body.product__description;
       const product_price = req.body.product__price;
+      let product_img_file = req.file;
 
-      db.run(
-        "UPDATE products SET title=?, description=?, price=? WHERE id=?",
-        product_title,
-        product_desc,
-        product_price,
-        product_id
-      );
+      if (!product_img_file) {
+        db.run(
+          "UPDATE products SET title=?, description=?, price=? WHERE id=?",
+          product_title,
+          product_desc,
+          product_price,
+          product_id
+        );
+      } else {
+        product_img_file = product_img_file.filename;
+        db.run(
+          "UPDATE products SET title=?, description=?, price=?, img=? WHERE id=?",
+          product_title,
+          product_desc,
+          product_price,
+          product_img_file,
+          product_id
+        );
+      }
 
       res.redirect("/admin/catalog_management");
     } catch (err) {
@@ -137,7 +150,11 @@ class Admin {
   static async deleteProduct(req, res, next) {
     try {
       const product_id = req.params.id;
-      console.log(product_id);
+      const product_img = req.query.img;
+
+      if (product_img !== "no_img.jpg")
+        fs.unlinkSync(`./public/product_images/${product_img}`);
+
       db.run("DELETE FROM products WHERE id=?", product_id);
 
       res.redirect("/admin/catalog_management");

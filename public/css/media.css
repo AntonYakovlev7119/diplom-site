@@ -20,6 +20,10 @@
     padding-top: 80px;
   }
 
+  .header-inner::before {
+    z-index: 1;
+  }
+
   .header__mobile-background {
     position: absolute;
     height: calc(100% - var(--header-inner-padding-top-mobile));
@@ -31,6 +35,7 @@
 
   .header-inner-left-side {
     margin: 0 auto;
+    background: transparent;
   }
 
   .header-logo-container {

@@ -35,8 +35,8 @@
 
 .company__advantage span {
   display: block;
-  font-size: calc(15px + 0.4vw);
-  font-weight: 300;
+  font-size: calc(15px + 0.2vw);
+  font-weight: 400;
   margin-top: 5px;
 }
 
@@ -44,8 +44,11 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  max-height: 240px;
   z-index: 99;
+}
+
+.advantage-scew {
+  max-height: 240px;
 }
 
 /* О комапании */
@@ -70,22 +73,38 @@
 /* Дрова */
 
 .wood {
-  padding: 150px 0 100px 0;
+  padding: 150px 0 50px 0;
   background: var(--primary-color);
 }
 
 .wood-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 5%;
-  flex-wrap: wrap;
 }
 
 .wood__img {
-  height: calc(var(--index) * 15);
-  box-shadow: 0 5px 18px rgb(117, 117, 117);
-  border-radius: 10px;
-  border: 5px solid var(--tertiary-color);
+  position: relative;
+}
+
+.wood__img img {
+  position: relative;
+  display: block;
+  height: calc(var(--index) * 18);
+  padding-right: 70px;
+  z-index: 999;
+}
+
+.wood-shadow {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 0;
+  left: calc(50% - 200px);
+  bottom: -20px;
+  box-shadow: 0 0 70px 15px black;
+  z-index: 99;
 }
 
 .wood-description-container {
@@ -129,10 +148,12 @@
 /* Древесеные изделия */
 
 .wood-products {
+  padding: 180px 0 150px 0;
   background: var(--secondary-color);
 }
 
 .wood-products-container {
+  position: relative;
   display: flex;
   justify-content: center;
   gap: 5%;
@@ -151,6 +172,7 @@
   box-shadow: 0 5px 18px rgb(117, 117, 117);
   border-radius: 10px;
   border: 5px solid var(--tertiary-color);
+  z-index: 999;
 }
 
 .wood-product__description {
@@ -190,6 +212,25 @@
   transition: var(--btn-transition);
 }
 
+.wood-products-top-scew {
+  max-height: 300px;
+  top: 0;
+}
+
+.wood-product-right-scew {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 40%;
+  /* width: 800px; */
+
+  z-index: 0;
+}
+
+/* width="100%" height="100%" */
+/* fill:#800000 */
+
 /* Как заказать */
 
 .about-order {
@@ -222,13 +263,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
   height: 35px;
   width: 35px;
   top: -12px;
   left: -12px;
-  font-size: 18px;
-  font-weight: 600;
-  background: var(--btn-bg-color);
+
+  /* background: var(--btn-bg-color); */
+  background: var(--quaternary-color);
   border-radius: 50%;
 }
 

@@ -33,11 +33,11 @@
                 alt="Демократичные цены"
                 title="Демократичные цены"
               />
-              <span>Доступные цены</span>
+              <span>Демократичные цены</span>
             </div>
           </div>
 
-          <div class="section-scew">
+          <div class="section-scew advantage-scew">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               xmlns:svg="http://www.w3.org/2000/svg"
@@ -58,15 +58,18 @@
         </section>
 
         <section class="wood page-section">
-          <h2 class="section-title">Колотые дрова</h2>
+          
           <div class="wood-container container">
-            <img
-              class="wood__img"
-              src="./img/wood1.jpg"
+            <div class="wood__img">
+              <img
+              src="./img/drova-test.png"
               alt="Дрова"
-              title="Дрова"
-            />
+              />
+              <div class="wood-shadow"></div>
+            </div>
+            
             <div class="wood-description-container text-container">
+              <h2 class="section-title">Колотые дрова</h2>
               <p class="wood__description"><%= content.wood_desc %></p>
               <a class="buy-wood__button" href="/catalog" role="button">
                 Перейти к каталогу
@@ -76,21 +79,135 @@
         </section>
 
         <section class="wood-products page-section">
-          <h2 class="section-title">Древесные изделия</h2>
+          <div class="section-scew wood-products-top-scew">
+            
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:svg="http://www.w3.org/2000/svg"
+              width="100%"
+              height="100%"
+              preserveAspectRatio="none"
+              viewBox="0 0 210 297"
+              version="1.1"
+            >
+              <path style="fill: var(--primary-color)" stroke-width="0.223733" d="M 0,0 V 120 L 210,-0.012362"/>
+            </svg>
+          </div>
+        
+          
           <div class="wood-products-container container">
             <div class="wood-product-description-container text-container">
+              <h2 class="section-title">Древесные изделия</h2>
               <p class="wood-product__description"><%= content.wood_product_desc %></p>
               <a class="buy-wood-product__button" href="/catalog" role="button">
                 Перейти к каталогу
               </a>
             </div>
-            <img
+
+            <div class="wood-products-slider">
+              <div class="swiper">
+                <!-- Additional required wrapper -->
+                <!-- <div class="slider-container"> -->
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                      <img
+                  class="wood-product__img"
+                  src="./img/wood-product1.jpg"
+                  alt="Дрова"
+                  title="Дрова"
+                />
+              </div>
+                    <div class="swiper-slide">
+                      <img
+                  class="wood-product__img"
+                  src="./img/wood-product1.jpg"
+                  alt="Дрова"
+                  title="Дрова"
+                />
+              </div>
+                    <div class="swiper-slide">
+                      <img
+                  class="wood-product__img"
+                  src="./img/wood-product1.jpg"
+                  alt="Дрова"
+                  title="Дрова"
+                />
+              </div>
+                <!-- </div>  -->
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+              
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+
+              <div class="swiper">
+                <!-- Additional required wrapper -->
+                <!-- <div class="slider-container"> -->
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                      <img
+                  class="wood-product__img"
+                  src="./img/wood-product1.jpg"
+                  alt="Дрова"
+                  title="Дрова"
+                />
+              </div>
+                    <div class="swiper-slide">
+                      <img
+                  class="wood-product__img"
+                  src="./img/wood-product1.jpg"
+                  alt="Дрова"
+                  title="Дрова"
+                />
+              </div>
+                    <div class="swiper-slide">
+                      <img
+                  class="wood-product__img"
+                  src="./img/wood-product1.jpg"
+                  alt="Дрова"
+                  title="Дрова"
+                />
+              </div>
+                <!-- </div>  -->
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+              
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+
+
+            </div>
+
+            
+
+            <!-- <img
               class="wood-product__img"
               src="./img/wood-product1.jpg"
               alt="Дрова"
               title="Дрова"
-            />
+            /> -->
+            
           </div>
+
+          <div class="wood-product-right-scew">
+            <svg  xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 96" version="1.1"  preserveAspectRatio="xMinYMax slice">
+              <path style="fill:rgb(184, 177, 79)" d="M 100.35484,0 V 96.870966 H 0 L 35.48387,0 h 64.87097"/>
+            </svg>
+          </div>
+
+          <!-- <div class="wood-product-right-scew">
+            <svg  xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 96" version="1.1"  preserveAspectRatio="none">
+              <path style="fill:rgb(184, 177, 79)" d="M 100.35484,0 V 96.870966 H 0 L 35.48387,0 h 64.87097"/>
+            </svg>
+          </div> -->
         </section>
 
         <section class="about-order page-section">
@@ -101,16 +218,14 @@
                 <div class="stage__number">1</div>
                 <p>Оставьте заявку</p>
                 <p>
-                  Позвоните по телефону либо оставьте заявку на сайте или в
-                  WhatsApp. Оператор уточнит тип дров, адрес и время доставки,
-                  также стоимость доставки
+                  Позвоните по телефону, либо составьте корзину товаров в каталоге. Оператор перезвонит вам для уточнения адреса и времени доставки.
                 </p>
               </div>
               <div class="order__stage">
                 <div class="stage__number">2</div>
                 <p>Доставка и разгрузка дров</p>
                 <p>
-                  Заранее позвонит водитель и сообщит о выезде к вам. Привезем
+                  Наш водитель заранее позвонит и сообщит о выезде к вам. Привезем
                   столько, сколько Вы заказали. При доставке водитель при Вас
                   измеряет объем и вручную бесплатно выгружает.
                 </p>
@@ -120,7 +235,7 @@
                 <p>Оплата</p>
                 <p>
                   Оплатить ваш заказ вы можете наличным и безналичным способом
-                  при доставке дров. Для юр. лиц оплата по счету.
+                  при доставке. Для юр. лиц оплата по счету.
                 </p>
               </div>
             </div>
@@ -134,11 +249,9 @@
           </div>
         </section>
 
-        <div class="cart-icon">
-          <img src="./img/cart-icon.png" alt="" />
-        </div>
+        <%-include("./__blocks/__cart.ejs")  %>
       
-        <a class="sroll-top-button" href="#body"></a>
+        <!-- <a class="sroll-top-button" href="#body"></a> -->
       </main>
 
 <%-include("./__blocks/__footer.ejs") %>

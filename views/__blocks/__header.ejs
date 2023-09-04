@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="./css/media.css" />
     <% if(req.url === "/"){ %>
     <link rel="stylesheet" href="./css/index.css" />
+    
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/slider.css">
+    <script src="./js/slider.js" defer></script>
+
     <% } %> <% if(req.url === "/catalog"){ %>
     <link rel="stylesheet" href="./css/catalog.css" />
     <% } %> <% if(req.url === "/contacts"){ %>
@@ -16,6 +25,7 @@
     <% } %>
     <link rel="stylesheet" href="./css/footer.css" />
     <script src="./js/app.js" defer></script>
+    <script src="./js/cart.js" defer></script>
     <title>ООО "Медведь"</title>
   </head>
   <body id="body">
@@ -39,8 +49,7 @@
             >
             <% } else {%><a class="nav__item" href="/contacts">Контакты</a><% }
             %>
-            <a class="nav__item" href="/admin/cms">Админ панель</a>
-            <!-- <% if(req.user) {%><a class="nav__item" href="/admin/cms">Админ панель</a> <% } %> -->
+            <% if(req.user) {%><a class="nav__item" href="/admin/cms">Админ панель</a> <% } %>
           </nav>
           <a class="header__telephone" href="tel:+79314325544">
             <span><%= content.telephone %></span>
@@ -49,7 +58,9 @@
         </div>
 
         <div class="header-inner">
-          <div class="header__mobile-background"></div>
+          <div class="header-background-container">
+            <div class="header-background__parallax-img"></div>
+          </div>
           <div class="header-inner-left-side">
             <div class="header-logo-container">
               <a href="/">
@@ -87,4 +98,3 @@
           <div class="header-inner-bottom-gradient"></div>
         </div>
       </header>
-    </div>

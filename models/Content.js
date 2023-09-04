@@ -92,8 +92,13 @@ class Content {
             orders.push({
               id: elem.id,
               client: elem.client,
-              order: elem.order,
+              telephone: elem.telephone,
+              cart: elem.cart,
+              cart_count: elem.cart_count,
+              order_notes: elem.order_notes,
               request_type: elem.request_type,
+              status: elem.status,
+              date: elem.date,
             });
           });
           res(orders);
@@ -105,6 +110,35 @@ class Content {
           "Не получилось получить данные продукции из базы данных"
         )
       );
+    }
+  }
+
+  static async getClientOrder(order_id) {
+    const id = order_id;
+    return new Promise((res, rej) => {
+      db.get("SELECT cart FROM orders WHERE id=?", id, (err, data) => {
+        res(data.cart);
+      });
+    });
+  }
+
+  static createCartOrder(client_cart) {
+    try {
+      const cart = client_cart;
+      const cart_order = JSON.stringify(cart.cart);
+
+      db.run(
+        "INSERT INTO orders (client, telephone, cart, cart_count, order_notes, request_type, status, date) VALUES (?,?,?,?,?,?,?, strftime('%Y-%m-%d', date('now')))",
+        cart.name,
+        cart.telephone,
+        cart_order,
+        cart.cart_count,
+        cart.order_notes,
+        "корзина",
+        "new"
+      );
+    } catch (err) {
+      console.log(err.message);
     }
   }
 

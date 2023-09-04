@@ -3,15 +3,14 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const bodyParser = require("body-parser");
-const bcrypt = require("bcrypt");
 const cookieParser = require("cookie-parser");
-const favicon = require("serve-favicon");
 const PORT = process.env.PORT || 5000;
 const sqlite3 = require("sqlite3").verbose();
 const db = new sqlite3.Database("medvedDB.db");
 
 const authRoute = require("./routes/authRoute");
 const adminRoute = require("./routes/adminRoute");
+const clientRoute = require("./routes/clientRoute");
 const errorHandler = require("./middleware/errorHandler");
 const authMiddleware = require("./middleware/authMiddleware");
 const ApiError = require("./models/Error");
@@ -44,7 +43,6 @@ app.get("/", authMiddleware, async (req, res, next) => {
       content,
       req,
     });
-    // res.json(content);
   } catch (err) {
     return next(new ApiError(err));
   }
@@ -78,18 +76,9 @@ app.get("/contacts", authMiddleware, async (req, res) => {
   }
 });
 
-app.post("/get_cart", (req, res) => {
-  const cart = req.body;
-  const cart_array = [];
-  Object.values(cart).forEach((elem) => {
-    cart_array.push(elem);
-  });
-
-  res.render("__blocks/cart", { products: cart_array });
-});
-
 app.use(authRoute);
 app.use("/admin", adminRoute);
+app.use(clientRoute);
 
 //Обработка ошибок
 app.use(errorHandler);
