@@ -149,9 +149,15 @@ async function addProductToCart() {
       const product_card = document.querySelector(
         `.product[data-id="${product_id}"]`
       );
-      const product_card_button = product_card.querySelector(
-        ".buy-product__button"
-      );
+      try{
+        const product_card_button = product_card.querySelector(
+          ".buy-product__button"
+        );
+        product_card_button.style.cssText =
+        "pointer-events: auto; background: var(--btn-bg-color);";
+      product_card_button.innerHTML = "В корзину";
+      }
+      catch(err){}
       const cart = JSON.parse(localStorage.cart);
 
       cart_product_card.remove();
@@ -161,9 +167,7 @@ async function addProductToCart() {
         delete cart[product_id];
         localStorage.cart = JSON.stringify(cart);
       }
-      product_card_button.style.cssText =
-        "pointer-events: auto; background: var(--btn-bg-color);";
-      product_card_button.innerHTML = "В корзину";
+      
       cartControl();
     });
   });
