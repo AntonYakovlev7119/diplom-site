@@ -7,7 +7,8 @@ const swiper_thumbs = new Swiper(".slider-thumbs .slider", {
   slidesPerView: 4,
   spaceBetween: 100,
   mousewheel: true,
-	freeMode: true,
+	freeMode: true
+
 })
 
 const swiper = new Swiper(".slider-images .slider", {
@@ -16,12 +17,19 @@ const swiper = new Swiper(".slider-images .slider", {
   speed: 1000,
   slidesPerView: 1,
   spaceBetween: 250,
-	freeMode: true,
+	// freeMode: true,
+  freeMode:{
+    enabled:true,
+// sticky:true
+  },
   grabCursor: true,
-  focusableElements: ".swiper-slide",
+  
 
   autoplay: {
     delay: 3000,
+    pauseOnMouseEnter: true,
+    disableOnInteraction: false,
+    // reverseDirection:true
   },
 
   navigation: {
