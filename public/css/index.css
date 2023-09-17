@@ -47,8 +47,9 @@
   z-index: 99;
 }
 
-.advantage-scew {
-  max-height: 240px;
+.header-scew {
+  height: 90px;
+  bottom: -90px;
 }
 
 /* О комапании */
