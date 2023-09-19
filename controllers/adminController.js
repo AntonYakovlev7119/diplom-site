@@ -11,19 +11,17 @@ class Admin {
   static async getCmsPage(req, res, next) {
     try {
       content = await Content.getAllPagesContent();
+      const section = req.query.section;
+      if (section) getListData();
 
       function getListData() {
-        const section = req.query.section;
-        if (section) {
-          const section_content = {
-            title: content[section].name,
-            content: content[section].content,
-          };
-          return res.json(section_content);
-        }
+        const section_content = {
+          title: content[section].name,
+          content: content[section].content,
+        };
+        return res.json(section_content);
       }
-
-      getListData();
+      
 
       return res.render("admin", { req, content });
     } catch (err) {

@@ -285,3 +285,22 @@
 .order__stage p {
   font-size: calc(15px + 0.2vw);
 }
+
+/*  */
+
+.cargo-transportation {
+  background: var(--primary-color);
+}
+.page-section {
+}
+.cargo-transportation-container {
+}
+.container {
+}
+.section-title {
+}
+.tree-clearing {
+  background: var(--secondary-color);
+}
+.tree-clearing-container {
+}
