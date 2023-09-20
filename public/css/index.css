@@ -180,6 +180,8 @@
 .wood-product__description {
   display: block;
   font-family: "Montserrat";
+  font-family: Roboto;
+  font-weight: 300;
   font-size: calc(15px + 0.5vw);
   line-height: 1.5em;
   text-shadow: 0 0px 1px rgb(187, 187, 187);
@@ -196,7 +198,7 @@
   font-weight: 300;
   color: var(--btn-bg-color);
   /* color: rgb(179 153 84); */
-  margin-top: 30px;
+  margin-top: auto;
   padding: 5px 10px;
   background: transparent;
   border: 2px solid var(--btn-bg-color);
@@ -237,70 +239,107 @@
   background: var(--primary-color);
 }
 
-.about-order-order-stages {
+.about-order-container {
   display: flex;
-  justify-content: center;
-  /* align-items: center; */
-  flex-wrap: wrap;
-  gap: calc(var(--index) * 3);
+  flex-direction: column;
+  align-items: center;
 }
 
-.order__stage {
+.order-type-select {
+  display: flex;
+  gap: 100px;
+}
+.order__type {
   position: relative;
-  display: block;
-  /* background: #e7d9cd; */
-  background: #f7f7f7;
-  max-height: 250px;
-  max-width: 360px;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 3px 8px grey, 0 7px 24px grey;
+
+  font-size: calc(15px + 0.8vw);
+  font-weight: 500;
+  color: var(--nav-font-color-hover);
+  /* padding: 10px; */
+  background: var(--primary-color);
+  cursor: pointer;
+  z-index: 999;
 }
 
-.stage__number {
+.order__type span {
+  padding: 10px;
+  /* background: var(--primary-color); */
+}
+
+.order__type span::after,
+.order__type span::before {
   content: "";
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-  font-weight: 600;
-  color: white;
-  height: 35px;
-  width: 35px;
-  top: -12px;
-  left: -12px;
-
-  /* background: var(--btn-bg-color); */
-  background: var(--quaternary-color);
-  border-radius: 50%;
+  height: 0;
+  width: 0;
+  /* z-index: -1; */
+  transition: 0.4s ease;
 }
 
-.order__stage p:nth-child(2) {
-  font-weight: 600;
-  font-size: calc(15px + 0.3vw);
-  margin-bottom: 10px;
+.order__type span:hover::after,
+.order__type span:hover::before {
+  height: calc(100% + 10px);
+  width: calc(100% + 10px);
 }
 
-.order__stage p {
-  font-size: calc(15px + 0.2vw);
+.order__type span:hover::after {
+  /* height: 100%;
+  width: 100%; */
+  border-top: 2px solid var(--nav-font-color-hover);
+  border-left: 2px solid var(--nav-font-color-hover);
+}
+
+.order__type span:hover::before {
+  /* height: 100%;
+  width: 100%; */
+  border-bottom: 2px solid var(--nav-font-color-hover);
+  border-right: 2px solid var(--nav-font-color-hover);
+}
+
+.order__type span::after {
+  top: -5px;
+  left: -5px;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  transform: translate(-1px, -1px);
+  z-index: -1;
+}
+
+.order__type span::before {
+  right: -5px;
+  bottom: -5px;
+  border-bottom: 2px solid transparent;
+  border-right: 2px solid transparent;
+  transform: translate(-1px, -1px);
+  z-index: 1;
+}
+
+.order-description-container {
+  width: 50vw;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.order-description-container p {
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: calc(15px + 0.5vw);
+  margin-top: 10px;
 }
 
 /*  */
 
 .cargo-transportation {
-  background: var(--primary-color);
+  background: var(--secondary-color);
 }
-.page-section {
-}
+
 .cargo-transportation-container {
 }
-.container {
-}
-.section-title {
-}
+
+/*  */
 .tree-clearing {
-  background: var(--secondary-color);
+  background: var(--primary-color);
 }
 .tree-clearing-container {
 }
