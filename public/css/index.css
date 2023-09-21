@@ -132,11 +132,11 @@
 
 .buy-wood__button {
   font-size: calc(15px + 0.8vw);
-  font-weight: 300;
+  /* font-weight: 300; */
   color: var(--btn-bg-color);
   /* color: rgb(179 153 84); */
   margin-top: 30px;
-  padding: 5px 10px;
+  padding: 5px 25px;
   background: transparent;
   border: 2px solid var(--btn-bg-color);
   border-radius: 10px;
@@ -180,7 +180,7 @@
 .wood-product__description {
   display: block;
   font-family: "Montserrat";
-  font-family: Roboto;
+  /* font-family: Roboto; */
   font-weight: 300;
   font-size: calc(15px + 0.5vw);
   line-height: 1.5em;
@@ -195,11 +195,11 @@
 
 .buy-wood-product__button {
   font-size: calc(15px + 0.8vw);
-  font-weight: 300;
+  /* font-weight: 300; */
   color: var(--btn-bg-color);
   /* color: rgb(179 153 84); */
-  margin-top: auto;
-  padding: 5px 10px;
+  margin-top: 30px;
+  padding: 5px 25px;
   background: transparent;
   border: 2px solid var(--btn-bg-color);
   border-radius: 10px;
@@ -250,19 +250,25 @@
   gap: 100px;
 }
 .order__type {
+  --text-color: rgb(102, 69, 19);
   position: relative;
 
   font-size: calc(15px + 0.8vw);
-  font-weight: 500;
-  color: var(--nav-font-color-hover);
+  font-weight: 700;
+  /* color: var(--btn-bg-color); */
+  /* color: var(--nav-font-color-hover); */
+  color: var(--text-color);
   /* padding: 10px; */
   background: var(--primary-color);
+  /* box-shadow: 0 3px 15px gray; */
   cursor: pointer;
   z-index: 999;
 }
 
 .order__type span {
-  padding: 10px;
+  display: block;
+  padding: 10px 30px;
+  text-align: center;
   /* background: var(--primary-color); */
 }
 
@@ -285,15 +291,15 @@
 .order__type span:hover::after {
   /* height: 100%;
   width: 100%; */
-  border-top: 2px solid var(--nav-font-color-hover);
-  border-left: 2px solid var(--nav-font-color-hover);
+  border-top: 1px solid var(--nav-font-color-hover);
+  border-left: 1px solid var(--nav-font-color-hover);
 }
 
 .order__type span:hover::before {
   /* height: 100%;
   width: 100%; */
-  border-bottom: 2px solid var(--nav-font-color-hover);
-  border-right: 2px solid var(--nav-font-color-hover);
+  border-bottom: 1px solid var(--nav-font-color-hover);
+  border-right: 1px solid var(--nav-font-color-hover);
 }
 
 .order__type span::after {
@@ -301,6 +307,8 @@
   left: -5px;
   border-top: 2px solid transparent;
   border-left: 2px solid transparent;
+  border-top: 0px solid var(--nav-font-color-hover);
+  border-left: 0px solid var(--nav-font-color-hover);
   transform: translate(-1px, -1px);
   z-index: -1;
 }
@@ -310,6 +318,8 @@
   bottom: -5px;
   border-bottom: 2px solid transparent;
   border-right: 2px solid transparent;
+  border-bottom: 0px solid var(--nav-font-color-hover);
+  border-right: 0px solid var(--nav-font-color-hover);
   transform: translate(-1px, -1px);
   z-index: 1;
 }
@@ -322,9 +332,10 @@
 }
 
 .order-description-container p {
-  font-family: Roboto;
-  font-weight: 300;
+  /* font-family: Roboto; */
+  /* font-weight: 700; */
   font-size: calc(15px + 0.5vw);
+  /* color: var(--text-color); */
   margin-top: 10px;
 }
 

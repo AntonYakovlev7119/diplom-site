@@ -11,7 +11,8 @@
   --nav-font-border-color: rgb(107, 100, 0);
   --nav-transition: 0.5s ease;
   --btn-transition: 0.35s ease;
-  --btn-bg-color: rgb(165, 115, 54);
+  /* --btn-bg-color: rgb(165, 115, 54); */
+  --btn-bg-color: rgb(145, 102, 49);
   --btn-bg-color-hover: rgb(197, 137, 64);
   --btn-bg-color-active: rgb(150, 105, 51);
   --header-inner-padding-top-desktop: 64px;
