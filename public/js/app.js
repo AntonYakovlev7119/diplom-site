@@ -1,7 +1,9 @@
 const nav_container = document.querySelector(".header-nav-container");
 const toggle_menu = document.querySelector(".toggle-menu");
 
-window.onscroll = function () {
+// Проверка прокрутки страницы для изменения навигации
+
+window.onscroll = function() {
   let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
   if (scrollTop > 64) {
     nav_container.classList.add("scrolled");
