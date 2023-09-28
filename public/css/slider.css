@@ -111,11 +111,12 @@
 
 .swiper-button-prev,
 .swiper-button-next {
+  height: 100px;
   top: var(--swiper-navigation-top-offset, 37%);
   color: var(--quaternary-color);
 }
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  font-size: 60px;
+  font-size: 65px;
 }

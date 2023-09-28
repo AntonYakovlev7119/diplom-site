@@ -132,9 +132,7 @@
 
 .buy-wood__button {
   font-size: calc(15px + 0.8vw);
-  /* font-weight: 300; */
   color: var(--btn-bg-color);
-  /* color: rgb(179 153 84); */
   margin-top: 30px;
   padding: 5px 25px;
   background: transparent;
@@ -146,9 +144,14 @@
 
 .buy-wood__button:hover {
   background: var(--btn-bg-color);
-  /* background: rgb(193 163 84); */
   color: var(--primary-color);
-  transition: var(--btn-transition);
+}
+
+.wood-background-img {
+  position: absolute;
+  width: 800px;
+  right: -80px;
+  opacity: 0.3;
 }
 
 /* Древесеные изделия */
@@ -335,6 +338,7 @@
   /* font-family: Roboto; */
   /* font-weight: 700; */
   font-size: calc(15px + 0.5vw);
+  line-height: 1.5em;
   /* color: var(--text-color); */
   margin-top: 10px;
 }
@@ -357,8 +361,8 @@
   /* width: 80vw;
   max-width: 100%; */
 
-  height: auto;
-  /* height: 80vh; */
+  /* height: auto; */
+  height: 100vh;
   /* background-image: url("../img/cargo-transportation-img.jpg");
   background-position: -50px;
   background-repeat: no-repeat;
@@ -366,6 +370,7 @@
 }
 
 .cargo-transportation-img img {
+  position: relative;
   /* height: 150%; */
   /* height: auto;
   width: 50vw; */
@@ -375,15 +380,32 @@
   object-fit: cover;
 }
 
+.cargo-transportation-img-scew {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 98;
+}
+
 .cargo-transportation-description {
   width: 100%;
+  margin-top: 60px;
   padding: 50px 0;
 }
 
 .cargo-transportation-description p {
   font-size: 22px;
   line-height: 1.5em;
-  margin: 0 120px;
+  margin: 0 120px 0 20px;
+}
+
+.cargo-transportation-scew {
+  position: absolute;
+  height: 120px;
+  width: 100%;
+  z-index: 99;
 }
 
 /*  */
