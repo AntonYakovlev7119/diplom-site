@@ -181,6 +181,7 @@
 }
 
 .wood-product__description {
+  position: relative;
   display: block;
   font-family: "Montserrat";
   /* font-family: Roboto; */
@@ -190,6 +191,40 @@
   text-shadow: 0 0px 1px rgb(187, 187, 187);
   white-space: pre-wrap;
   word-wrap: break-word;
+  overflow: hidden;
+}
+
+.wood-product__description::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 90%;
+  top: 0;
+  right: 0;
+  background: linear-gradient(
+    -35deg,
+    rgba(245, 245, 245, 1) 20%,
+    rgba(245, 245, 245, 0)
+  );
+
+  animation: wood-product-description-transition 2s linear infinite;
+  opacity: 0;
+}
+
+@keyframes wood-product-description-transition {
+  0% {
+    /* width: 0; */
+  }
+
+  40% {
+    opacity: 1;
+    width: 160%;
+  }
+
+  100% {
+    opacity: 1;
+    width: 0;
+  }
 }
 
 .wood-product__description ul {
