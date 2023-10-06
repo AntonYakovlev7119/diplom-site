@@ -3,10 +3,8 @@
 const swiper_thumbs = new Swiper(".slider-thumbs .slider", {
   direction: "horizontal",
   loop: true,
-  speed: 1000,
+  speed: 500,
   slidesPerView: 4,
-  spaceBetween: 100,
-  mousewheel: true,
 	freeMode: true
 
 })
@@ -26,7 +24,7 @@ const swiper = new Swiper(".slider-images .slider", {
   
 
   autoplay: {
-    delay: 3000,
+    delay: 5000,
     pauseOnMouseEnter: true,
     disableOnInteraction: false,
     // reverseDirection:true
