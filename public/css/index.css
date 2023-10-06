@@ -169,19 +169,36 @@
   flex-wrap: wrap;
 }
 
-.wood-product-description-container {
+.wood-products-description {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.wood-products-description-container {
+  position: relative;
   width: 45vw;
 }
 
-.wood-product__img {
-  /* z-index: 999; */
+.wood-products-description-container::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 140%;
+  top: 0;
+  right: 0;
+  background: linear-gradient(
+    to left,
+    rgba(245, 245, 245, 1) 80%,
+    rgba(245, 245, 245, 0)
+  );
+  transform: skewX(-35deg);
+  animation: wood-product-description-transition 1.25s linear infinite;
+  opacity: 0;
 }
 
-.wood-product__description {
-  position: relative;
+.wood-products__description {
+  /* position: absolute; */
   display: block;
   font-family: "Montserrat";
   /* font-family: Roboto; */
@@ -194,31 +211,10 @@
   overflow: hidden;
 }
 
-.wood-product__description::after {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 90%;
-  top: 0;
-  right: 0;
-  background: linear-gradient(
-    -35deg,
-    rgba(245, 245, 245, 1) 20%,
-    rgba(245, 245, 245, 0)
-  );
-
-  animation: wood-product-description-transition 2s linear infinite;
-  opacity: 0;
-}
-
 @keyframes wood-product-description-transition {
-  0% {
-    /* width: 0; */
-  }
-
   40% {
     opacity: 1;
-    width: 160%;
+    width: 140%;
   }
 
   100% {
@@ -227,11 +223,11 @@
   }
 }
 
-.wood-product__description ul {
+.wood-products__description ul {
   margin-top: 20px;
 }
 
-.buy-wood-product__button {
+.buy-wood-products__button {
   font-size: calc(15px + 0.8vw);
   /* font-weight: 300; */
   color: var(--btn-bg-color);
@@ -245,7 +241,7 @@
   cursor: pointer;
 }
 
-.buy-wood-product__button:hover {
+.buy-wood-products__button:hover {
   background: var(--btn-bg-color);
   /* background: rgb(193 163 84); */
   color: var(--primary-color);
