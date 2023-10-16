@@ -8,13 +8,15 @@
   --primary-font-color: rgb(206, 206, 206);
   --secondary-font-color: rgb(39, 39, 39);
   --nav-font-color: #fff;
-  --nav-font-color-hover: rgb(141 132 16);
+  /* --nav-font-color-hover: rgb(141 132 16); */
+  --nav-font-color-hover: rgb(169, 146, 60);
   --nav-font-border-color: rgb(107, 100, 0);
   --nav-transition: 0.5s ease;
   --btn-transition: 0.35s ease;
   /* --btn-bg-color: rgb(165, 115, 54); */
   --btn-bg-color: rgb(145, 102, 49);
-  --btn-bg-color-hover: rgb(197, 137, 64);
+  /* --btn-bg-color-hover: rgb(197, 137, 64); */
+  --btn-bg-color-hover: rgb(185 160 66);
   --btn-bg-color-active: rgb(150, 105, 51);
   --header-inner-padding-top-desktop: 64px;
   --header-inner-padding-top-mobile: 80px;
@@ -75,30 +77,34 @@ h1.page-title {
   -webkit-text-stroke: 1.5px var(--btn-bg-color);
 }
 
-h1.page-title::before {
-  content: "Колотые дрова";
+h2.section-title {
+  display: block;
+  font-family: Roboto;
+  font-size: calc(15px + 1vw);
+  font-size: 50px;
+  font-weight: 600;
+  color: var(--tertiary-color);
+  margin-bottom: 40px;
+  text-align: center;
+  z-index: 999;
+  /* -webkit-text-stroke: 1px rgb(214, 180, 28); */
+  /* -webkit-text-stroke: 1.5px rgb(134, 111, 6); */
+  /* -webkit-text-stroke: 1.5px var(--nav-font-color-hover); */
+  /* -webkit-text-fill-color: transparent; */
+}
+
+h2.section-title::before {
+  /* content: "Древесные изделия"; */
   position: absolute;
+  display: block;
   font-family: Roboto;
   font-size: 80px;
   font-weight: 600;
   -webkit-text-stroke: 1.5px rgb(134, 111, 6);
   -webkit-text-fill-color: transparent;
   transform: translate(-25px, -45px);
-  opacity: 0.4;
-}
-
-h2.section-title {
-  /* font-family: "SF Pro Display"; */
-  font-family: Roboto;
-  font-size: calc(15px + 1vw);
-  font-size: 50px;
-  font-weight: 600;
-  /* color: var(--secondary-font-color); */
-  margin-bottom: 40px;
-  text-align: center;
-  /* -webkit-text-stroke: 1px rgb(214, 180, 28); */
-  -webkit-text-stroke: 1.5px rgb(134, 111, 6);
-  -webkit-text-fill-color: transparent;
+  opacity: 0.3;
+  z-index: -1;
 }
 
 .container {
