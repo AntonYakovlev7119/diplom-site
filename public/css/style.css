@@ -9,7 +9,7 @@
   --secondary-font-color: rgb(39, 39, 39);
   --nav-font-color: #fff;
   /* --nav-font-color-hover: rgb(141 132 16); */
-  --nav-font-color-hover: rgb(169, 146, 60);
+  --nav-font-color-hover: rgb(169, 135, 60);
   --nav-font-border-color: rgb(107, 100, 0);
   --nav-transition: 0.5s ease;
   --btn-transition: 0.35s ease;
@@ -102,7 +102,7 @@ h2.section-title::before {
   font-weight: 600;
   -webkit-text-stroke: 1.5px rgb(134, 111, 6);
   -webkit-text-fill-color: transparent;
-  transform: translate(-25px, -45px);
+  transform: translate(-100px, -50px);
   opacity: 0.3;
   z-index: -1;
 }
@@ -119,6 +119,7 @@ main.page-content {
 .page-section {
   position: relative;
   padding: 100px 0;
+  z-index: 9998;
 }
 
 /* Кнопка прокрутки наверх */

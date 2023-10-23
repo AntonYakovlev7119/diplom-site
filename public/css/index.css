@@ -172,7 +172,7 @@
   display: flex;
   justify-content: center;
   gap: 5%;
-  flex-wrap: wrap;
+  padding: 0 50px;
 }
 
 .wood-products-description-title::before {
@@ -183,32 +183,37 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 50%;
 }
 
 .wood-products-description-container {
   position: relative;
-  width: 45vw;
+  height: 500px;
+  width: 100%;
 }
 
 .wood-products-description-container::after {
   content: "";
   position: absolute;
   height: 100%;
-  width: 140%;
+  width: 160%;
   top: 0;
-  right: 0;
+  right: -10%;
+  /* right: -80px; */
   background: linear-gradient(
     to left,
-    rgba(245, 245, 245, 1) 80%,
+    rgba(245, 245, 245, 1) 90%,
     rgba(245, 245, 245, 0)
   );
-  transform: skewX(-35deg);
-  animation: wood-product-description-transition 1.25s linear infinite;
+  transform: skewX(-30deg);
+  /* transform: translateX(50%) skewX(-30deg); */
+  animation: wood-product-description-transition 1.5s linear infinite;
   opacity: 0;
+  z-index: 999;
 }
 
 .wood-products__description {
-  /* position: absolute; */
+  position: absolute;
   display: block;
   font-family: "Montserrat";
   /* font-family: Roboto; */
@@ -218,18 +223,31 @@
   text-shadow: 0 0px 1px rgb(187, 187, 187);
   white-space: pre-wrap;
   word-wrap: break-word;
+  top: 0;
+  left: 0;
+  background: var(--secondary-color);
   overflow: hidden;
+  z-index: -1;
+}
+
+.wood-products__description.active {
+  z-index: 99;
 }
 
 @keyframes wood-product-description-transition {
+  0% {
+    opacity: 0;
+  }
   40% {
     opacity: 1;
-    width: 140%;
+    /* width: 160%; */
+    transform: translateX(0) skewX(-30deg);
   }
 
   100% {
     opacity: 1;
-    width: 0;
+    /* width: 0; */
+    transform: translateX(100%) skewX(-30deg);
   }
 }
 
@@ -259,8 +277,10 @@
 }
 
 .wood-products-top-scew {
+  position: absolute;
   max-height: 300px;
   top: 0;
+  z-index: 9999;
 }
 
 .wood-product-right-scew {
@@ -268,17 +288,18 @@
   top: 0;
   right: 0;
   height: 100%;
-  width: 40%;
+  width: 50%;
   /* width: 800px; */
 
-  z-index: 0;
+  z-index: 9998;
 }
 
 .wood-product-right-scew path {
   /* fill: rgb(122, 78, 27); */
   fill: #e7c570;
   fill: rgb(169, 146, 60);
-  fill: rgb(185 160 66);
+  /* fill: rgb(185 160 66); */
+  fill: var(--nav-font-color-hover);
 }
 
 /* width="100%" height="100%" */
