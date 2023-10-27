@@ -3,13 +3,17 @@
   --primary-color: rgb(245, 235, 226);
   --secondary-color: rgb(245, 245, 245);
   --tertiary-color: rgb(39, 39, 39);
-  --quaternary-color: rgb(156, 44, 29);
+  /* --quaternary-color: rgb(156, 44, 29); */
   --quaternary-color: rgb(138, 35, 21);
   --primary-font-color: rgb(206, 206, 206);
   --secondary-font-color: rgb(39, 39, 39);
   --nav-font-color: #fff;
   /* --nav-font-color-hover: rgb(141 132 16); */
-  --nav-font-color-hover: rgb(169, 146, 60);
+  /* --nav-font-color-hover: rgb(169, 146, 60); */
+  /* --nav-font-color-hover: rgb(160, 125, 27); */
+  /* --nav-font-color-hover: rgb(161, 123, 77); */
+  --nav-font-color-hover: #a17738;
+  /* --nav-font-color-hover: #cf9443; */
   --nav-font-border-color: rgb(107, 100, 0);
   --nav-transition: 0.5s ease;
   --btn-transition: 0.35s ease;
@@ -78,6 +82,7 @@ h1.page-title {
 }
 
 h2.section-title {
+  /* position: relative; */
   display: block;
   font-family: Roboto;
   font-size: calc(15px + 1vw);
@@ -119,6 +124,7 @@ main.page-content {
 .page-section {
   position: relative;
   padding: 100px 0;
+  z-index: 9998;
 }
 
 /* Кнопка прокрутки наверх */

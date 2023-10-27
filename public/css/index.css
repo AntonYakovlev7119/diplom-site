@@ -85,6 +85,10 @@
   gap: 5%;
 }
 
+.wood-title::before {
+  content: "Колотые дрова";
+}
+
 .wood__img {
   position: relative;
   display: flex;
@@ -172,7 +176,7 @@
   display: flex;
   justify-content: center;
   gap: 5%;
-  flex-wrap: wrap;
+  padding: 0 50px;
 }
 
 .wood-products-description-title::before {
@@ -183,32 +187,37 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 50%;
 }
 
 .wood-products-description-container {
   position: relative;
-  width: 45vw;
+  height: 500px;
+  width: 100%;
 }
 
-.wood-products-description-container::after {
+.wood-products__description::after {
   content: "";
   position: absolute;
   height: 100%;
-  width: 140%;
+  width: 160%;
   top: 0;
-  right: 0;
+  /* right: -10%; */
+  right: -120px;
   background: linear-gradient(
     to left,
-    rgba(245, 245, 245, 1) 80%,
+    rgba(245, 245, 245, 1) 90%,
     rgba(245, 245, 245, 0)
   );
-  transform: skewX(-35deg);
-  animation: wood-product-description-transition 1.25s linear infinite;
+  transform: skewX(-30deg);
+  /* transform: translateX(50%) skewX(-30deg); */
+  animation: wood-product-description-transition 1.5s linear infinite;
   opacity: 0;
+  z-index: 999;
 }
 
 .wood-products__description {
-  /* position: absolute; */
+  position: absolute;
   display: block;
   font-family: "Montserrat";
   /* font-family: Roboto; */
@@ -218,18 +227,31 @@
   text-shadow: 0 0px 1px rgb(187, 187, 187);
   white-space: pre-wrap;
   word-wrap: break-word;
+  top: 0;
+  left: 0;
+  background: var(--secondary-color);
   overflow: hidden;
+  z-index: -1;
+}
+
+.wood-products__description.active {
+  z-index: 99;
 }
 
 @keyframes wood-product-description-transition {
+  0% {
+    opacity: 0;
+  }
   40% {
     opacity: 1;
-    width: 140%;
+    /* width: 160%; */
+    transform: translateX(0) skewX(-30deg);
   }
 
   100% {
     opacity: 1;
-    width: 0;
+    /* width: 0; */
+    transform: translateX(100%) skewX(-30deg);
   }
 }
 
@@ -259,8 +281,10 @@
 }
 
 .wood-products-top-scew {
+  position: absolute;
   max-height: 300px;
   top: 0;
+  z-index: 9999;
 }
 
 .wood-product-right-scew {
@@ -268,17 +292,18 @@
   top: 0;
   right: 0;
   height: 100%;
-  width: 40%;
+  width: 50%;
   /* width: 800px; */
 
-  z-index: 0;
+  z-index: 9998;
 }
 
 .wood-product-right-scew path {
   /* fill: rgb(122, 78, 27); */
   fill: #e7c570;
   fill: rgb(169, 146, 60);
-  fill: rgb(185 160 66);
+  /* fill: rgb(185 160 66); */
+  fill: var(--nav-font-color-hover);
 }
 
 /* width="100%" height="100%" */
@@ -287,36 +312,44 @@
 /* Как заказать */
 
 .about-order {
+  position: relative;
   background: var(--primary-color);
+  z-index: 9999;
 }
 
 .about-order-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
 
-  /* background: url(../img/wood-background1.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.1; */
+.about-order-title::before {
+  content: "Доставка и оплата";
 }
 
 .order-type-select {
+  background: var(--secondary-color);
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.order-type-select-container {
   display: flex;
   gap: 100px;
 }
 .order__type {
   --text-color: rgb(102, 69, 19);
   position: relative;
-
-  font-size: calc(15px + 0.8vw);
-  font-weight: 700;
+  /* font-style: italic; */
+  font-family: Roboto;
+  font-size: calc(15px + 0.6vw);
+  font-weight: 500;
   /* color: var(--btn-bg-color); */
   /* color: var(--nav-font-color-hover); */
   color: var(--text-color);
   /* padding: 10px; */
-  background: var(--primary-color);
+  /* background: var(--primary-color); */
+  background: var(--secondary-color);
   /* box-shadow: 0 3px 15px gray; */
   cursor: pointer;
   z-index: 999;
@@ -395,6 +428,21 @@
   line-height: 1.5em;
   /* color: var(--text-color); */
   margin-top: 10px;
+  text-shadow: 0px 0px 1px rgb(82, 82, 82);
+}
+
+.about-order-background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 260px;
+  background: url(../img/wood-background1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.1;
+  z-index: -1;
 }
 
 /*  */
@@ -406,6 +454,10 @@
 
 .cargo-transportation-container {
   display: flex;
+}
+
+.cargo-transportation-title::before {
+  content: "Грузоперевозки";
 }
 
 .cargo-transportation-img {

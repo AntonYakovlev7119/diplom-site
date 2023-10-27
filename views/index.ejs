@@ -51,7 +51,7 @@
             </div>
             
             <div class="wood-description-container text-container">
-              <h2 class="section-title">Колотые дрова</h2>
+              <h2 class="wood-title section-title">Колотые дрова</h2>
               <p class="wood__description"><%= content.wood_desc %></p>
               <a class="buy-wood__button" href="/catalog" role="button">
                 В каталог
@@ -86,7 +86,7 @@
           </div>
         
           
-          <div class="wood-products-container container">
+          <!-- <div class="wood-products-container container">
             <div class="wood-products-description text-container">
               <h2 class="wood-products-description-title section-title">Древесные изделия</h2>
               <div class="wood-products-description-container">
@@ -95,7 +95,27 @@
               <a class="buy-wood-products__button" href="/catalog" role="button">
                 В каталог
               </a>
-            </div>
+            </div> -->
+
+            <div class="wood-products-container container">
+              <div class="wood-products-description text-container">
+                <h2 class="wood-products-description-title section-title">Древесные изделия</h2>
+                <div class="wood-products-description-container">
+                  <p class="wood-products__description "><%= content.wood_product_desc %></p>
+                  <p class="wood-products__description ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit pariatur libero ipsam rem ea repudiandae laborum vel perferendis animi aperiam quaerat voluptas nihil, ratione quae, earum placeat harum dolorem architecto!
+                  Sequi magni eum ipsum, ut exercitationem quis tenetur nam aperiam harum eos, alias ex nesciunt minima dolor at dignissimos vero eius eaque officiis magnam praesentium, fugit qui. Nisi, quam laboriosam.
+                  </p>
+                  <p class="wood-products__description active">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit pariatur libero ipsam rem ea repudiandae laborum vel perferendis animi aperiam quaerat voluptas nihil, ratione quae, earum placeat harum dolorem architecto!
+                  Sequi magni eum ipsum, ut exercitationem quis tenetur nam aperiam harum eos, alias ex nesciunt minima dolor at dignissimos vero eius eaque officiis magnam praesentium, fugit qui. Nisi, quam laboriosam.
+                  Quisquam doloremque dolores tenetur est omnis, eos soluta molestias nisi, dolore repellendus numquam assumenda accusantium! Maiores quidem vero, cupiditate deserunt facere asperiores magni illo reprehenderit nesciunt sit, amet, saepe officiis?</p>
+                  <p class="wood-products__description">Lorem gfgfgfgfgfgfgfgfgfggfgfggfg pisicing elit. Reprehenderit pariatur libero ipsam rem ea repudiandae laborum vel perferendis animi aperiam quaerat voluptas nihil, ratione quae, earum placeat harum dolorem architecto!
+                  Sequi magni eum ipsum, ut exercitationem quis tenetur nam aperiam harum eos, alias ex nesciunt minima dolor at dignissimos vero eius eaque officiis magnam praesentium, fugit qui. Nisi, quam laboriosam.
+                  Quisquam doloremque dolores tenetur est omnis, eos soluta molestias nisi, dolore repellendus numquam assumenda accusantium! Maiores quidem vero, cupiditate deserunt facere asperiores magni illo reprehenderit nesciunt sit, amet, saepe officiis?</p>
+                </div>
+                <a class="buy-wood-products__button" href="/catalog" role="button">
+                  В каталог
+                </a>
+              </div>
 
             <div class="wood-products-slider">
               <div class="slider-images">
@@ -174,7 +194,7 @@
                       <div class="slider__img">
                         <img
                         class="wood-product__img"
-                        src="./img/wood-product1.jpg"
+                        src="./img/drova-test.png"
                         alt="Дрова"
                         title="Дрова"
                       />
@@ -256,32 +276,37 @@
         </section>
 
         <section class="about-order page-section">
-          <h2 class="section-title">Доставка и оплата</h2>
+          <h2 class="about-order-title section-title">Доставка и оплата</h2>
           <div class="about-order-container container">
             <div class="order-type-select">
-              <div class="order__type">
-                <span>Физ<br>лицам</span>
-              </div>
-              <div class="order__type">
-                <span>Юр<br>лицам</span>
+              <div class="order-type-select-container">
+                <div class="order__type">
+                  <span>Частным<br>лицам</span>
+                </div>
+                <div class="order__type">
+                  <span>Юридическим<br>лицам</span>
+                </div>
               </div>
             </div>
+            
+            
 
             <div class="order-description-container">
               <p>1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ad dolores veniam facere minus quos, dignissimos quis maiores, neque labore eaque consectetur? Quaerat facere illum explicabo non sed fugit temporibus?</p>
               <p>2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ad dolores veniam facere minus quos, dignissimos quis maiores, neque labore eaque consectetur? Quaerat facere illum explicabo non sed fugit temporibus?</p>
               <p>3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ad dolores veniam facere minus quos, dignissimos quis maiores, neque labore eaque consectetur? Quaerat facere illum explicabo non sed fugit temporibus?</p>
             </div>
+            <div class="about-order-background"></div>
           </div>
         </section>
 
         <!-- 5 секций -->
         <section class="cargo-transportation page-section">
-          <div class="cargo-transportation-scew">
+          <!-- <div class="cargo-transportation-scew">
             <svg  xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 210 21.65" version="1.1"  preserveAspectRatio="xMinYMin slice">
               <path xmlns="http://www.w3.org/2000/svg" style="fill:var(--primary-color);stroke:none;stroke-width:0.3" d="M 0,0 210,15.649999 V 0 Z"/>
             </svg>
-          </div>
+          </div> -->
 
           <div class="cargo-transportation-container container">
             
@@ -294,7 +319,7 @@
               </div>
             </div>
             <div class="cargo-transportation-description">
-              <h2 class="section-title">Грузоперевозки</h2>
+              <h2 class="cargo-transportation-title section-title">Грузоперевозки</h2>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero sint nostrum corrupti nulla ullam dolor consequuntur, mollitia deleniti vel veniam harum eius aliquam natus perspiciatis expedita dolorem? Voluptate, excepturi deserunt!
               Debitis natus architecto, optio quo, assumenda eos aperiam repellendus doloremque laborum aspernatur eum culpa ratione exercitationem eius iure. Aliquam quae beatae vel officiis, alias praesentium distinctio ea rem delectus harum!
               </p>
@@ -304,7 +329,7 @@
 
         <section class="tree-clearing page-section">
           <div class="tree-clearing-container container">
-            <h2 class="section-title">Расчистка древесных насаждений</h2>
+            <h2 class="tree-clearing-title section-title">Расчистка древесных насаждений</h2>
             
           </div>
         </section>
