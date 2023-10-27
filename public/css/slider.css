@@ -54,7 +54,8 @@
 
 .slider-images .swiper-slide img {
   height: auto;
-  width: 400px;
+  width: calc(var(--index) * 16);
+  max-width: 400px;
   /* height: 400px;
   width: 100%; */
   transition: 0.8s;

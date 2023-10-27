@@ -192,14 +192,14 @@
   width: 100%;
 }
 
-.wood-products-description-container::after {
+.wood-products__description::after {
   content: "";
   position: absolute;
   height: 100%;
   width: 160%;
   top: 0;
-  right: -10%;
-  /* right: -80px; */
+  /* right: -10%; */
+  right: -120px;
   background: linear-gradient(
     to left,
     rgba(245, 245, 245, 1) 90%,
