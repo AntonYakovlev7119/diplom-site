@@ -1,7 +1,9 @@
 .wood-products-slider {
   position: relative;
+
+  height: 100%;
   max-width: 600px;
-  width: 100%;
+  /* width: 100%; */
   /* padding: 32px; */
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -17,11 +19,11 @@
 }
 
 .slider-images {
-  height: 400px;
-
+  max-height: 400px;
+  height: calc(var(--index) * 16);
   /* max-height: 360px; */
   /* height: 100%; */
-  margin-bottom: 32px;
+  /* margin-bottom: 32px; */
   overflow: hidden;
 }
 
@@ -96,8 +98,10 @@
 }
 
 .slider-thumbs .swiper-slide img {
-  height: 120px;
-  width: 120px;
+  height: calc(var(--index) * 7);
+  width: calc(var(--index) * 7);
+  max-height: 120px;
+  max-width: 120px;
   padding: 5px;
   border-radius: 10px;
   border: 4px solid transparent;
