@@ -85,7 +85,7 @@ h2.section-title {
   /* position: relative; */
   display: block;
   font-family: Roboto;
-  font-size: calc(15px + 1vw);
+  font-size: calc(32px + 1vw);
   font-size: 50px;
   font-weight: 600;
   color: var(--tertiary-color);
@@ -103,7 +103,7 @@ h2.section-title::before {
   position: absolute;
   display: block;
   font-family: Roboto;
-  font-size: 80px;
+  font-size: 1.75em;
   font-weight: 600;
   -webkit-text-stroke: 1.5px rgb(134, 111, 6);
   -webkit-text-fill-color: transparent;

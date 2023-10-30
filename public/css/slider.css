@@ -3,6 +3,7 @@
 
   height: 100%;
   max-width: 600px;
+  width: calc(var(--index) * 25);
   /* width: 100%; */
   /* padding: 32px; */
   -webkit-user-select: none;
@@ -46,6 +47,13 @@
   justify-content: center;
   transform: rotate(-25deg);
   /* transform: rotate(-205deg); */
+  transition: 0.75s;
+}
+
+.slider-images .swiper-slide-next,
+.slider-images .swiper-slide-prev {
+  transform: rotate(-25deg) scale(0.85);
+  opacity: 0.5;
 }
 
 .swiper-wrapper .swiper-slide img {

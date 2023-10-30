@@ -3,7 +3,7 @@ const toggle_menu = document.querySelector(".toggle-menu");
 
 // Проверка прокрутки страницы для изменения навигации
 
-window.onscroll = function() {
+(window.onscroll = function() {
   let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
   if (scrollTop > 64) {
     nav_container.classList.add("scrolled");
@@ -11,7 +11,8 @@ window.onscroll = function() {
   if (scrollTop < 64) {
     nav_container.classList.remove("scrolled");
   }
-};
+}
+)();
 
 toggle_menu.addEventListener("click", () => {
   nav_container.classList.toggle("active");

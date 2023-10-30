@@ -12,7 +12,7 @@ const swiper = new Swiper(".slider-images .slider", {
   loop: true,
   speed: 1000,
   slidesPerView: 1,
-  spaceBetween: 250,
+  spaceBetween: 200,
   // freeMode: true,
   freeMode: {
     enabled: true,
@@ -20,12 +20,12 @@ const swiper = new Swiper(".slider-images .slider", {
   },
   grabCursor: true,
 
-  autoplay: {
-    delay: 5000,
-    pauseOnMouseEnter: true,
-    disableOnInteraction: false,
-    // reverseDirection:true
-  },
+  // autoplay: {
+  //   delay: 5000,
+  //   pauseOnMouseEnter: true,
+  //   disableOnInteraction: false,
+  //   // reverseDirection:true
+  // },
 
   navigation: {
     nextEl: ".swiper-button-next",
