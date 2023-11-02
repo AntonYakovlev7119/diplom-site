@@ -1,5 +1,7 @@
 const nav_container = document.querySelector(".header-nav-container");
 const toggle_menu = document.querySelector(".toggle-menu");
+const wood_products_description_container = document.querySelectorAll(".wood-products-description-container p");
+console.log(wood_products_description_container);
 
 // Проверка прокрутки страницы для изменения навигации
 
@@ -28,3 +30,11 @@ document.addEventListener("mousemove", (e) => {
 		`,
   });
 });
+
+function highestWoodProductDescElem(){
+  let maxHeight = null;
+  wood_products_description_container.forEach((elem)=> {
+  if(elem.offsetHeight > maxHeight)  maxHeight = elem.offsetHeight;
+});
+console.log(maxHeight);
+};

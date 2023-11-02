@@ -86,7 +86,7 @@ h2.section-title {
   display: block;
   font-family: Roboto;
   font-size: calc(32px + 1vw);
-  font-size: 50px;
+  /* font-size: 50px; */
   font-weight: 600;
   color: var(--tertiary-color);
   margin-bottom: 40px;

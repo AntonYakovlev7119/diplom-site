@@ -201,11 +201,14 @@
 .wood-products__description::after {
   content: "";
   position: absolute;
+  --wp_height: height;
+  /* height: var(--wp_height); */
   height: 100%;
+  width: 0;
   width: 160%;
   top: 0;
-  /* right: -10%; */
-  right: -120px;
+  right: calc(100% / -4);
+  /* right: -120px; */
   background: linear-gradient(
     to left,
     rgba(245, 245, 245, 1) 90%,
@@ -213,8 +216,8 @@
   );
   transform: skewX(-30deg);
   /* transform: translateX(50%) skewX(-30deg); */
-  animation: wood-product-description-transition 1.5s linear infinite;
-  opacity: 0;
+  /* animation: wood-product-description-transition 1.5s linear; */
+  /* opacity: 0; */
   z-index: 99;
 }
 
@@ -245,16 +248,17 @@
 @keyframes wood-product-description-transition {
   0% {
     opacity: 0;
+    width: 160%;
   }
   40% {
     opacity: 1;
-    /* width: 160%; */
+    width: 160%;
     transform: translateX(0) skewX(-30deg);
   }
 
   100% {
     opacity: 1;
-    /* width: 0; */
+    width: 0;
     transform: translateX(100%) skewX(-30deg);
   }
 }
