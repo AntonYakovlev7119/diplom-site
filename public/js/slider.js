@@ -16,7 +16,6 @@ const swiper = new Swiper(".slider-images .slider", {
   // freeMode: true,
   freeMode: {
     enabled: true,
-    // sticky:true
   },
   grabCursor: true,
 
@@ -38,3 +37,4 @@ const swiper = new Swiper(".slider-images .slider", {
 });
 
 // horizontal
+

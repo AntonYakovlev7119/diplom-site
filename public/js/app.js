@@ -1,11 +1,15 @@
 const nav_container = document.querySelector(".header-nav-container");
 const toggle_menu = document.querySelector(".toggle-menu");
 const wood_products_description_container = document.querySelectorAll(".wood-products-description-container p");
-console.log(wood_products_description_container);
+
+
+// window.onload = function(){
+  findHighestElement();
+// }
 
 // Проверка прокрутки страницы для изменения навигации
 
-(window.onscroll = function() {
+window.onscroll = function() {
   let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
   if (scrollTop > 64) {
     nav_container.classList.add("scrolled");
@@ -13,8 +17,7 @@ console.log(wood_products_description_container);
   if (scrollTop < 64) {
     nav_container.classList.remove("scrolled");
   }
-}
-)();
+};
 
 toggle_menu.addEventListener("click", () => {
   nav_container.classList.toggle("active");
@@ -31,10 +34,14 @@ document.addEventListener("mousemove", (e) => {
   });
 });
 
-function highestWoodProductDescElem(){
-  let maxHeight = null;
+//Поиск самого большого по высоте .wood-products__description элемента
+
+function findHighestElement(){
+  console.log(wood_products_description_container);
+  let maxElem = wood_products_description_container[0];
   wood_products_description_container.forEach((elem)=> {
-  if(elem.offsetHeight > maxHeight)  maxHeight = elem.offsetHeight;
+  if(elem.offsetHeight > maxElem.offsetHeight) maxElem = elem;
 });
-console.log(maxHeight);
+ 
+  console.log(maxElem);
 };
